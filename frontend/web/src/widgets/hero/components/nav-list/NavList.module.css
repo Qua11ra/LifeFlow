@@ -1,0 +1,20 @@
+.nav_list {
+    display: none;
+    & > li {
+        list-style: none;
+        min-width: fit-content;
+        & > a {
+            text-decoration: none;
+            min-width: fit-content;
+            color: var(--color-text-primary);
+        }
+    }
+}
+
+@media (width > 768px) {
+    .nav_list {
+        display: flex;
+        align-items: center;
+        gap: 1rem;
+    }
+}

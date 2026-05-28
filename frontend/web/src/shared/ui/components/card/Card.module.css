@@ -1,0 +1,23 @@
+.card {
+    background-color: var(--color-secondary);
+    padding: 2rem;
+    border-radius: 1.5rem;
+    box-shadow: 0 0 1rem rgba(0, 0, 0, 0.1);
+
+    width: 15rem;
+    height: 15rem;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.card > p {
+    font-size: large;
+}
+
+.icon_background {
+    width: fit-content;
+    padding: 1rem;
+    border-radius: 2rem;
+}

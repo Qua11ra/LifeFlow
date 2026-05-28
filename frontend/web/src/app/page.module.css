@@ -1,0 +1,16 @@
+:root {
+    scroll-behavior: smooth;
+}
+
+.main {
+    position: relative;
+    min-height: 100vh;
+    height: fit-content;
+    padding-inline: 2rem;
+}
+
+@media (width > 768px) {
+    .main {
+        padding-inline: 5vw;
+    }
+}

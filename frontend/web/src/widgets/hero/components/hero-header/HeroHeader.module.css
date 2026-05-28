@@ -1,0 +1,33 @@
+.hero_header {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.buttons {
+    display: none;
+}
+
+.logo {
+    margin-right: 1rem;
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+.logo__text {
+    color: var(--color-primary);
+    font-weight: var(--font-h2-weight);
+    font-size: var(--font-h2-size);
+}
+
+@media (width > 768px) {
+    .hero_header {
+        justify-content: space-between;
+    }
+    .buttons {
+        display: flex;
+        align-items: center;
+        gap: 5rem;
+    }
+}

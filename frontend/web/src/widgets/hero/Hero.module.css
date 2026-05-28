@@ -1,0 +1,6 @@
+.hero {
+    padding-block: 2rem;
+    height: calc(100vh - 3rem);
+    display: flex;
+    flex-direction: column;
+}
