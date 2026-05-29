@@ -13,10 +13,10 @@ export default function Landing() {
             <LandingBackground />
             <Hero />
             <AboutApp />
-            {/* <Features />
+            <Features />
             <HowItWorks />
             <FAQ />
-            <Footer /> */}
+            <Footer />
         </div>
     );
 };

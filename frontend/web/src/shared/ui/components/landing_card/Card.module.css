@@ -10,14 +10,21 @@
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+    align-items: center;
+    
+    & > p {
+        font-size: large;
+    }
+
+    & > h3 {
+        font-size: 1.25rem;
+        white-space: 1rem;
+    }
+
+    & > .icon_background {
+        width: fit-content;
+        padding: 1rem;
+        border-radius: 2rem;
+    }
 }
 
-.card > p {
-    font-size: large;
-}
-
-.icon_background {
-    width: fit-content;
-    padding: 1rem;
-    border-radius: 2rem;
-}

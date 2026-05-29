@@ -1,6 +1,6 @@
 .aboutApp_section {
     box-sizing: border-box;
-    width: 100%;
+    max-width: 100%;
     min-height: 100vh;
     height: fit-content;
 
@@ -10,4 +10,27 @@
     align-items: center;
     text-align: center;
     gap: 1rem;
+
+    .aboutApp_section__main {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 3rem;
+    }
+}
+
+@media (width > 1024px) {
+    .aboutApp_section {
+        text-align: start;
+        & > .aboutApp_section__main {
+            flex-grow: 1;
+            flex-direction: row;
+            align-items: center;
+
+            & > div:nth-child(1) {
+                width: 45%;
+                min-width: 15rem;
+            }
+        }
+    }
 }

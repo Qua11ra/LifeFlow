@@ -1,0 +1,25 @@
+.square_line {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+
+    & > .square_line__left {
+        background-color: var(--color-thirty);
+        width: 5rem;
+        height: 3px;
+        border-top-left-radius: 100%;
+        border-bottom-left-radius: 100%;
+        border-top-right-radius: 10%;
+        border-bottom-right-radius: 10%;
+    }
+
+    & > .square_line__right {
+        background-color: var(--color-thirty);
+        width: 5rem;
+        height: 3px;
+        border-top-right-radius: 100%;
+        border-bottom-right-radius: 100%;
+        border-top-left-radius: 10%;
+        border-bottom-left-radius: 10%;
+    }
+}

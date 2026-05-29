@@ -12,8 +12,8 @@ export default function HeroReviews() {
     return (
         <div className={styles.reviews}>
             <div className={styles.reviews_icons}>
-                {ICONS.map(icon => (
-                    <Image src={icon} alt="logo" width={LOGO_WIDTH} height={LOGO_HEIGHT} />
+                {ICONS.map((icon, idx) => (
+                    <Image key={idx} src={icon} alt="logo" width={LOGO_WIDTH} height={LOGO_HEIGHT} />
                 ))}
             </div>
             <div className={styles.reviews_description}>

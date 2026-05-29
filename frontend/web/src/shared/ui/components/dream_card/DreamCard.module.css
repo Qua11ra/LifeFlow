@@ -1,14 +1,11 @@
 .card {
     position: relative;
-    max-width: 40vw;
-    max-height: 20vw;
     min-height: fit-content;
     min-width: fit-content;
-    height: 20vw;
     display: flex;
 
     border-radius: var(--radius-sm);
-    padding: 1rem;
+    padding: 2rem;
 
     & > .card__background {
         position: absolute;
@@ -23,19 +20,23 @@
 
     & > .card__info {
         align-self: flex-end;
-        width: 50%;
-        height: 50%;
+        width: 100%;
+        height: 100%;
         background-color: #ffffff99;
         text-align: start;
-        padding: 1rem;
+        padding: 1.5rem;
         border-radius: var(--radius-sm);
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
 
         & > .card__info__label {
             font-weight: 800;
-            font-size: large;
+            font-size: 1rem;
+            white-space: 1rem;
         }
 
-        & > .card__info__progress {
+        & .card__info__progress {
             display: flex;
             align-items: center;
             gap: 0.5rem;
@@ -43,7 +44,7 @@
             & > .card__info__progress__line {
                 width: 100%;
                 height: 0.5rem;
-                background-color: #d4d4d490;
+                background-color: #d4d4d4;
                 border-radius: var(--radius-sm);
 
                 & > .card__info__progress__line_filled {
@@ -52,6 +53,22 @@
                     background-color: var(--color-primary);
                     border-radius: var(--radius-sm);
                 }
+            }
+        }
+    }
+}
+
+@media (width > 768px) {
+    .card {
+        min-width: clamp(25rem, 60vw, 45rem);
+        min-height: 20rem;
+
+        & > .card__info {
+            width: 65%;
+            height: 45%;
+
+            & > .card__info__label {
+                font-size: 2rem;
             }
         }
     }

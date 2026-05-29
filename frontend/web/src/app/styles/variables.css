@@ -1,9 +1,10 @@
 :root {
     --color-primary: #4883e4;
     --color-secondary: #fff;
+    --color-thirty: #8224f6;
     --color-error: #ef4444;
     --color-text-primary: #202946;
-    --color-text-secondary: #8224f6;
+    --color-text-secondary: var(--color-thirty);
     --color-text-light: #fff;
 
     --spacing-primary: -0.01rem;

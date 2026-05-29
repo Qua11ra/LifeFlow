@@ -1,26 +1,24 @@
 .features_section {
+    padding-block: 3rem;
+    box-sizing: border-box;
     width: 100%;
     min-height: 100vh;
     height: fit-content;
-    padding-block: 2rem;
+    text-align: center;
 
     display: flex;
     flex-direction: column;
-    justify-content: center;
     align-items: center;
-    gap: 2rem;
-}
-
-.cards_list {
-    width: 100%;
-    height: 100%;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    align-items: center;
-    gap: 3rem;
-}
-
-.cards_list:nth-child(1) {
-    align-self: flex-start;
+    gap: 1rem;
+    
+    & > .features_section__cards_list {
+        width: 100%;
+        height: 100%;
+        display: flex;
+        flex-wrap: wrap;
+        flex-grow: 1;
+        justify-content: center;
+        align-items: center;
+        gap: 3rem;
+    }
 }
