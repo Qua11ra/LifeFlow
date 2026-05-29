@@ -1,4 +1,4 @@
-import { NAV_LIST } from "./const/navList";
+import { NAV_LIST } from "./navList";
 import styles from "./NavList.module.css"
 
 export default function NavList() {

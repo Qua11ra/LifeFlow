@@ -5,17 +5,18 @@ import HowItWorks from "@/widgets/how-it-works/HowItWorks";
 import FAQ from "@/widgets/faq/FAQ";
 import Footer from "@/widgets/footer/Footer";
 import LandingBackground from "@/shared/ui/components/landing-background/LandingBackground";
+import AboutApp from "@/widgets/about-app/AboutApp";
 
 export default function Landing() {
     return (
-        <div className={`${styles.main}`}>
+        <div className={styles.main}>
             <LandingBackground />
-            <div className={styles.background}></div>
             <Hero />
-            <Features />
+            <AboutApp />
+            {/* <Features />
             <HowItWorks />
             <FAQ />
-            <Footer />
+            <Footer /> */}
         </div>
     );
 };

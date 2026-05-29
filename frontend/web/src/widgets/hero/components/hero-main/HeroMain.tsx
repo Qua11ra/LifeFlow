@@ -4,7 +4,7 @@ import styles from "./Heromain.module.css"
 export default function HeroMain() {
     return (
         <section className={styles.hero_main}>
-            <h1>Make your dreams into a really road</h1>
+            <h1>Make your dreams into the really way</h1>
             <p>
                 LifeFlow helps you to split a big goals into steps and actions.
                 Step every day and complete the imposible

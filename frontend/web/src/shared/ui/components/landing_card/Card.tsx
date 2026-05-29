@@ -4,7 +4,7 @@ import styles from "./Card.module.css"
 interface ICardProps {
     label: string,
     text: string,
-    icon: string,
+    icon?: string | undefined,
     iconBackgroundColor: string
 }
 

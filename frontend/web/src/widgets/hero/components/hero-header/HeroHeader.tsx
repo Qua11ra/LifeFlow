@@ -14,12 +14,10 @@ export default function HeroHeader() {
                 <Image src={logo} alt="Logo" width={LOGOWEIGHT} height={LOGOHEIGHT} />
                 <p className={styles.logo__text}>LifeFlow</p>
             </div>
-            <div className={styles.buttons}>
             <NavList />
             <Button>
                 <p>Begin the road</p>
             </Button>
-            </div>
         </div>
     );
 };

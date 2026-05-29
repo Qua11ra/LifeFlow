@@ -2,10 +2,11 @@
     --color-primary: #4883e4;
     --color-secondary: #fff;
     --color-error: #ef4444;
-    --color-text: #202946;
+    --color-text-primary: #202946;
+    --color-text-secondary: #8224f6;
     --color-text-light: #fff;
 
-    --spacing-primary: -0.1rem;
+    --spacing-primary: -0.01rem;
 
     --font-family-primary: "ElmaSans", system-ui, sans-serif;
     --font-family-secondary: "GoogleSans", system-ui, sans-serif;
@@ -22,18 +23,20 @@
     --font-h3-line-height: 2.5rem;
     --font-h3-weight: 800;
 
-    --font-p-weight: 500;
+    --font-h4-weight: 500;
+    --font-h4-size: 1.5rem;
+    --font-h4-line-height: 2rem;
+
+    --font-p-weight: 400;
     --font-p-size: 1rem;
     --font-p-line-height: 2rem;
 
-    --radius-sm: 0.25rem;
-    --radius-md: 0.5rem;
-    --radius-lg: 0.75rem;
+    --radius-sm: 1.25rem;
+    --radius-md: 1.5rem;
 
-    --shadow-sm: 0 1px 2px 0 rgb(0 0 0 / 0.05);
-    --shadow-md: 0 4px 6px -1px rgb(0 0 0 / 0.1);
+    --box-shadow-sm: 0 0 1rem rgba(0, 0, 0, 0.1);
 
-    --button-border-radius: 1.25rem;
+    --button-border-radius: var(--radius-sm);
     --button-color-primary: var(--color-primary);
     --button-color-secondary: rgb(225, 75, 255);
     --button-color-text: var(--color-text-light);
@@ -55,10 +58,10 @@
         --font-h1-size: max(5rem, 5vw);
         --font-h1-line-height: max(5rem, 5vw);
 
-        --font-h2-size: 2rem;
+        --font-h2-size: max(3rem, 2vw);
         --font-h2-line-height: 4rem;
 
-        --font-p-size: max(1.25rem, 1.5vw);
+        --font-p-size: max(1.25rem, 1vw);
         --font-p-line-height: max(2rem, 1vw);
 
         --button-small-padding-x: 1.8rem;

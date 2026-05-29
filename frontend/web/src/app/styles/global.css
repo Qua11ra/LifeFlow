@@ -6,7 +6,7 @@
 :root {
     font-family: var(--font-family-primary);
     letter-spacing: var(--spacing-primary);
-    color: var(--color-text);
+    color: var(--color-text-primary);
     box-sizing: border-box;
 }
 
@@ -28,8 +28,20 @@ h3 {
     line-height: var(--font-h3-line-height);
 }
 
+h4 {
+    font-weight: var(--font-h4-weight);
+    font-size: var(--font-h4-size);
+    line-height: var(--font-h4-line-height);
+    color: var(--color-text-secondary);
+    text-transform: uppercase;
+}
+
 p, a {
     font-weight: var(--font-p-weight);
     font-size: var(--font-p-size);
     line-height: var(--font-p-line-height);
+}
+
+button {
+    cursor: pointer;
 }

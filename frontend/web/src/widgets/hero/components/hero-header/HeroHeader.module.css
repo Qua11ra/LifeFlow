@@ -3,11 +3,12 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    
+    & > button {
+        display: none;
+    }
 }
 
-.buttons {
-    display: none;
-}
 
 .logo {
     margin-right: 1rem;
@@ -24,10 +25,9 @@
 @media (width > 768px) {
     .hero_header {
         justify-content: space-between;
-    }
-    .buttons {
-        display: flex;
-        align-items: center;
-        gap: 5rem;
+
+        & > button {
+            display: block;
+        }
     }
 }

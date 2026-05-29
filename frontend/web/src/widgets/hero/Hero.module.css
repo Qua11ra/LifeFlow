@@ -1,6 +1,9 @@
 .hero {
-    padding-block: 2rem;
-    height: calc(100vh - 3rem);
+    box-sizing: border-box;
+    padding-block: 3rem;
+    min-height: 100vh;
     display: flex;
     flex-direction: column;
+    justify-content: space-between;
+    gap: 3rem
 }

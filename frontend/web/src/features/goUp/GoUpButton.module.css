@@ -1,0 +1,22 @@
+.goUp {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 2rem;
+
+
+    .goUp_button {
+        border: none;
+        background: none;
+    
+        & + .clue {
+            width: fit-content;
+    
+            display: none;
+        }
+    
+        &:hover + .clue {
+            display: block;
+        }
+    }
+}

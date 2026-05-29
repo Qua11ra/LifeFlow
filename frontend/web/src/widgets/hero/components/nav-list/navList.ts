@@ -6,5 +6,6 @@ type INavList = {
 export const NAV_LIST: INavList[] = [
     {label: "About app", to: "#about-app"},
     {label: "Features", to: "#features"},
-    {label: "How It works", to: "#how-it-works"}
+    {label: "How It works", to: "#how-it-works"},
+    {label: "Reviews", to: "#reviews"},
 ]
