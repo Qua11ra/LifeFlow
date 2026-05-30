@@ -1,6 +1,8 @@
 import { ILandingStepProps } from "./components/HowItWorksStep";
 import MountainImage from "@/../public/images/Landing_Mountain.png";
 import IslandsImage from "@/../public/images/Landing_Islands.png";
+import DocumentImage from "@/../public/images/Landing_Document.png";
+import CastleImage from "@/../public/images/Landing_Castle.png";
 
 export const HOW_IT_WORKS_STEPS: ILandingStepProps[] = [
     {
@@ -19,12 +21,12 @@ export const HOW_IT_WORKS_STEPS: ILandingStepProps[] = [
         stepNum: 3,
         label: "Complete the actions",
         text: "Add actions and complete then every day",
-        image: IslandsImage,
+        image: DocumentImage,
     },
     {
         stepNum: 4,
         label: "Achieve the dreams",
         text: "Check a progress and have fun from results",
-        image: IslandsImage,
+        image: CastleImage,
     },
 ];

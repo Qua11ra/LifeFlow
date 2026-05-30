@@ -32,6 +32,10 @@
     --font-p-size: 1rem;
     --font-p-line-height: 2rem;
 
+    --font-strong-weight: 600;
+    --font-strong-size: 1.25rem;
+    --font-strong-line-height: 2rem;
+
     --radius-sm: 1.25rem;
     --radius-md: 1.5rem;
 

@@ -36,10 +36,23 @@ h4 {
     text-transform: uppercase;
 }
 
-p, a {
+p,
+a {
     font-weight: var(--font-p-weight);
     font-size: var(--font-p-size);
     line-height: var(--font-p-line-height);
+    text-decoration: none;
+    min-width: fit-content;
+}
+
+a {
+    color: var(--color-text-primary);
+}
+
+strong {
+    font-weight: var(--font-strong-weight);
+    font-size: var(--font-strong-size);
+    line-height: var(--font-strong-line-height);
 }
 
 button {

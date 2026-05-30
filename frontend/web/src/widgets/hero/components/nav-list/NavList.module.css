@@ -3,11 +3,6 @@
     & > li {
         list-style: none;
         min-width: fit-content;
-        & > a {
-            text-decoration: none;
-            min-width: fit-content;
-            color: var(--color-text-primary);
-        }
     }
 }
 

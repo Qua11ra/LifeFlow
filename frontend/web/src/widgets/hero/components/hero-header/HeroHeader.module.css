@@ -9,19 +9,6 @@
     }
 }
 
-
-.logo {
-    margin-right: 1rem;
-    display: flex;
-    align-items: center;
-    gap: 1rem;
-}
-.logo__text {
-    color: var(--color-primary);
-    font-weight: var(--font-h2-weight);
-    font-size: var(--font-h2-size);
-}
-
 @media (width > 768px) {
     .hero_header {
         justify-content: space-between;
