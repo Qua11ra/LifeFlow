@@ -11,6 +11,6 @@ interface IButtonProps extends ButtonHTMLAttributes<HTMLButtonElement> {
 
 export default function Button({children, variant = "primary", size = 'small', type = 'button', className, disabled, onClick, ...restProps }: IButtonProps) {
     return (
-        <button type={type} className={`${styles.button} ${styles[size]} ${className || ""}`} onClick={onClick} {...restProps}>{children}</button>
+        <button data-size={size} type={type} className={`${styles.button} ${styles[size]} ${className || ""}`} onClick={onClick} {...restProps}>{children}</button>
     );
 };

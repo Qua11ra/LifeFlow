@@ -13,10 +13,10 @@ const STEP_IMAGE_WIDTH = 250, STEP_IMAGE_HEIGHT = 250
 export default function HowItWorksStep({stepNum, image, label, text}: ILandingStepProps) {
     return (
         <div className={styles.step}>
-            <Image className={styles.step__image} src={image} alt={label} width={STEP_IMAGE_WIDTH} height={STEP_IMAGE_HEIGHT} />
+            <Image className={styles.image} src={image} alt={label} width={STEP_IMAGE_WIDTH} height={STEP_IMAGE_HEIGHT} />
             <h4>{label}</h4>
             <p>{text}</p>
-            <div className={styles.step__number}>
+            <div className={styles.number}>
                 <p>{stepNum}</p>
             </div>
         </div>

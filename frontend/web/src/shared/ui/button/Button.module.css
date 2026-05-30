@@ -2,9 +2,12 @@
     border: none;
     border-radius: var(--button-border-radius);
     color: var(--button-color-text);
-    transition: all;
+    transition: all 2s ease-in-out;
     transition-duration: var(--button-transition-duration);
     min-width: fit-content;
+
+    font-size: var(--font-p-size);
+    font-weight: var(--font-p-weight);
 }
 
 .button:hover {
@@ -25,12 +28,25 @@
         var(--button-color-primary),
         var(--button-color-secondary)
     );
+    position: relative;
+    overflow: hidden;
 }
 
-.button.medium:hover {
-    background: linear-gradient(
-        90deg,
-        var(--button-color-secondary),
-        var(--button-color-primary)
-    );
+.medium::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 0;
+    height: 0;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.5);
+    transform: translate(-50%, -50%);
+    transition: width 0.6s, height 0.6s;
 }
+
+.medium:hover::before {
+    width: 300px;
+    height: 300px;
+}
+

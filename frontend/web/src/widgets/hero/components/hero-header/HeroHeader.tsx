@@ -1,7 +1,7 @@
 import styles from "./HeroHeader.module.css";
 import NavList from "../nav-list/NavList";
-import Button from "@/shared/ui/components/button/Button";
-import LifeFlowLogo from "@/shared/ui/components/lifeFlowLogo/LifeFlowLogo";
+import Button from "@/shared/ui/button/Button";
+import LifeFlowLogo from "@/shared/ui/lifeflow-logo/LifeFlowLogo";
 
 export default function HeroHeader() {
     return (
@@ -9,7 +9,7 @@ export default function HeroHeader() {
             <LifeFlowLogo />
             <NavList />
             <Button>
-                <p>Begin the road</p>
+                Begin the road
             </Button>
         </div>
     );

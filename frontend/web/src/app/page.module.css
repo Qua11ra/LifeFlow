@@ -9,6 +9,27 @@
     padding-inline: 2rem;
 }
 
+.main::before, .main::after {
+    position: absolute;
+    content: "";
+    top: 0;
+    right: 0;
+    width: 100vw;
+    height: 100vh;
+}
+
+.main::before {
+    background: no-repeat url("@/../public/images/Landing-background.png");
+    background-size: cover;
+    z-index: -2;
+}
+
+.main::after {
+    background: linear-gradient(#ffffff, #ffffff00, #ffffff);
+    background-size: cover;
+    z-index: -1;
+}
+
 @media (width > 768px) {
     .main {
         padding-inline: 5vw;

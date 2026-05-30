@@ -11,7 +11,7 @@
     text-align: center;
     gap: 1rem;
 
-    .aboutApp_section__main {
+    .main {
         display: flex;
         flex-direction: column;
         align-items: center;
@@ -22,7 +22,7 @@
 @media (width > 1024px) {
     .aboutApp_section {
         text-align: start;
-        & > .aboutApp_section__main {
+        & > .main {
             flex-grow: 1;
             flex-direction: row;
 

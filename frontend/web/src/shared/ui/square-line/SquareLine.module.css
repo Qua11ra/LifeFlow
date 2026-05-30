@@ -3,7 +3,7 @@
     align-items: center;
     gap: 0.5rem;
 
-    & > .square_line__left {
+    & > .left {
         background-color: var(--color-thirty);
         width: 5rem;
         height: 3px;
@@ -13,7 +13,7 @@
         border-bottom-right-radius: 10%;
     }
 
-    & > .square_line__right {
+    & > .right {
         background-color: var(--color-thirty);
         width: 5rem;
         height: 3px;

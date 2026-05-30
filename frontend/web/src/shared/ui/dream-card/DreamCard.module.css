@@ -7,7 +7,7 @@
     border-radius: var(--radius-sm);
     padding: 2rem;
 
-    & > .card__background {
+    & > .background {
         position: absolute;
         width: 100%;
         height: 100%;
@@ -18,7 +18,7 @@
         border-radius: var(--radius-sm);
     }
 
-    & > .card__info {
+    & > .info {
         align-self: flex-end;
         width: 100%;
         height: 100%;
@@ -30,24 +30,24 @@
         flex-direction: column;
         justify-content: space-between;
 
-        & > .card__info__label {
+        & > .label {
             font-weight: 800;
             font-size: 1rem;
             white-space: 1rem;
         }
 
-        & .card__info__progress {
+        & .progress {
             display: flex;
             align-items: center;
             gap: 0.5rem;
 
-            & > .card__info__progress__line {
+            & > .line {
                 width: 100%;
                 height: 0.5rem;
                 background-color: #d4d4d4;
                 border-radius: var(--radius-sm);
 
-                & > .card__info__progress__line_filled {
+                & > .line_filled {
                     width: 76%;
                     height: 0.5rem;
                     background-color: var(--color-primary);
@@ -63,11 +63,11 @@
         min-width: clamp(25rem, 60vw, 45rem);
         min-height: 20rem;
 
-        & > .card__info {
+        & > .info {
             width: 65%;
             height: 45%;
 
-            & > .card__info__label {
+            & > .label {
                 font-size: 2rem;
             }
         }

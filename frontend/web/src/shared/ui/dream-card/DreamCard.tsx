@@ -21,23 +21,23 @@ export default function DreamCard({
             <Image
                 src={background}
                 alt="card"
-                className={styles.card__background}
+                className={styles.background}
             />
 
-            <div className={styles.card__info}>
-                <p className={styles.card__info__label}>{label}</p>
+            <div className={styles.info}>
+                <p className={styles.label}>{label}</p>
                 <div>
-                    <div className={styles.card__info__progress}>
-                        <div className={styles.card__info__progress__line}>
+                    <div className={styles.progress}>
+                        <div className={styles.line}>
                             <div
                                 className={
-                                    styles.card__info__progress__line_filled
+                                    styles.line_filled
                                 }
                             ></div>
                         </div>
                         <p>{percent}%</p>
                     </div>
-                    <p className={styles.card__info__description}>
+                    <p className={styles.description}>
                         {currentStep} of {totalStepCount} steps completed
                     </p>
                 </div>

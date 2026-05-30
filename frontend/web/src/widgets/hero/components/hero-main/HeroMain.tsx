@@ -1,5 +1,5 @@
-import Button from "@/shared/ui/components/button/Button";
-import styles from "./Heromain.module.css"
+import Button from "@/shared/ui/button/Button";
+import styles from "./Heromain.module.css";
 
 export default function HeroMain() {
     return (
@@ -10,9 +10,7 @@ export default function HeroMain() {
                 Step every day and complete the imposible
             </p>
             {/*//TODO write a normal description like maket*/}
-            <Button size="medium">
-                <p>Begin the road</p>
-            </Button>
+            <Button size="medium">Begin the road</Button>
         </section>
     );
 }
