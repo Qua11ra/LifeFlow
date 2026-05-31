@@ -1,4 +1,4 @@
-import DreamCard from "@/shared/ui/dream-card/DreamCard";
+import { DreamCard } from "@/shared/ui";
 import styles from "./AboutApp.module.css";
 import DREAMCARD_EXAMPLE_BACKGROUND from "@/../public/images/Landing_AboutApp_Card-background.png";
 import GoUpButton from "@/features/goUp/GoUpButton";

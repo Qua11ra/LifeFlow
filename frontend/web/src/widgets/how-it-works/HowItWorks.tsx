@@ -1,5 +1,5 @@
 import styles from "./HowItWorks.module.css";
-import SquareLine from "@/shared/ui/square-line/SquareLine";
+import { SquareLine } from "@/shared/ui";
 import { HOW_IT_WORKS_STEPS } from "./steps";
 import HowItWorksStep from "./components/HowItWorksStep";
 import Button from "@/shared/ui/button/Button";
@@ -27,9 +27,7 @@ export default function HowItWorks() {
                     Join thousands people, who already converting their dreams
                     to reality with LifeFlow.
                 </p>
-                <Button size="medium">
-                    Begin the road
-                </Button>
+                <Button size="medium">Begin the road</Button>
             </div>
         </section>
     );

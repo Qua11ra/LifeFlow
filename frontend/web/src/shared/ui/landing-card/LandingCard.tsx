@@ -1,5 +1,5 @@
 import Image from "next/image";
-import styles from "./Card.module.css"
+import styles from "./LandingCard.module.css"
 
 interface ICardProps {
     label: string,
@@ -10,7 +10,7 @@ interface ICardProps {
 
 const CARD_LOGO_WIDTH = 45, CARD_LOGO_HEIGHT = 45
 
-export default function Card({label, icon, text, iconBackgroundColor}: ICardProps) {
+export default function LandingCard({label, icon, text, iconBackgroundColor}: ICardProps) {
     return (
         <div className={`${styles.card}`}>
             <div className={styles.icon_background} style={{backgroundColor: iconBackgroundColor}}>

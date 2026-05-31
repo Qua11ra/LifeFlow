@@ -1,4 +1,4 @@
-import Button from "@/shared/ui/button/Button";
+import { Button } from "@/shared/ui";
 import styles from "./Heromain.module.css";
 
 export default function HeroMain() {

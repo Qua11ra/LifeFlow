@@ -1,4 +1,4 @@
-import LifeFlowLogo from "@/shared/ui/lifeflow-logo/LifeFlowLogo";
+import { LifeFlowLogo } from "@/shared/ui";
 import styles from "./Footer.module.css";
 import Image from "next/image";
 import xIcon from "@/../public/images/x-logog.png";
@@ -38,11 +38,13 @@ export default function Footer() {
                     </div>
                 </div>
                 <ul className={styles.info}>
-                    {INFOS.map(({label, texts}) => (
+                    {INFOS.map(({ label, texts }) => (
                         <li key={label}>
                             <strong>{label}</strong>
-                            {texts.map(({label, to}) => (
-                                <a href={to} key={label}>{label}</a>
+                            {texts.map(({ label, to }) => (
+                                <a href={to} key={label}>
+                                    {label}
+                                </a>
                             ))}
                         </li>
                     ))}

@@ -6,7 +6,7 @@ export default function NavList() {
         <nav className={styles.nav_list}>
             {NAV_LIST.map(({ label, to }) => (
                 <a key={label} href={to}>
-                    {label}
+                    {label} /
                 </a>
             ))}
         </nav>
