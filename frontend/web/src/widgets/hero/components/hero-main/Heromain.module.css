@@ -5,6 +5,8 @@
     align-items: center;
     gap: 5rem;
     text-align: center;
+
+    color: var(--color-text-in-background);
 }
 
 @media (width > 768px) {

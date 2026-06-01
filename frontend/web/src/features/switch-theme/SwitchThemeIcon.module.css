@@ -1,0 +1,31 @@
+.switch_theme_button {
+    background: #fff;
+    border-radius: 2rem;
+    padding-block: 0.1rem;
+    padding-inline: 0.2rem;
+    min-width: 5rem;
+    min-height: fit-content;
+
+    display: flex;
+    align-items: center;
+}
+
+.ball {
+    padding: 2px;
+    border-radius: 100%;
+    border: 1px solid #000;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: all 200ms ease-in-out;
+}
+
+:root[data-theme="dark"] .switch_theme_button > div {
+    transform: translateX(2.5rem) rotate(90deg);
+    background-color: #000;
+
+    & > svg {
+        fill: #fff;
+    }
+}

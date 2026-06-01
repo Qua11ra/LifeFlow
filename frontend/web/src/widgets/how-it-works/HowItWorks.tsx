@@ -1,14 +1,14 @@
 import styles from "./HowItWorks.module.css";
-import { SquareLine } from "@/shared/ui";
+import { SquareLine } from "@/shared";
 import { HOW_IT_WORKS_STEPS } from "./steps";
 import HowItWorksStep from "./components/HowItWorksStep";
-import Button from "@/shared/ui/button/Button";
+import GoToUpButton from "@/features/goToApp/GoToAppButton";
 
 export default function HowItWorks() {
     return (
         <section id="how-it-works" className={styles.howItWorks_section}>
-            <h4>How It Works</h4>
-            <h2>The Easy way to big achievements</h2>
+            <h2>How It Works</h2>
+            <h3>The Easy way to big achievements</h3>
             <SquareLine />
             <div className={styles.main}>
                 {HOW_IT_WORKS_STEPS.map(({ image, label, stepNum, text }) => (
@@ -27,7 +27,7 @@ export default function HowItWorks() {
                     Join thousands people, who already converting their dreams
                     to reality with LifeFlow.
                 </p>
-                <Button size="medium">Begin the road</Button>
+                <GoToUpButton />
             </div>
         </section>
     );

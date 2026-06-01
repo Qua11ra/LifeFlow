@@ -8,8 +8,6 @@ const ICON_WIDTH = 30,
 
 export default function GoUpButton() {
     function handleClick() {
-        if (!window) return;
-
         window.scrollTo({ top: 0, behavior: "smooth" });
     }
 

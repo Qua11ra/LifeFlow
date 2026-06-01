@@ -1,4 +1,4 @@
-import { LifeFlowLogo } from "@/shared/ui";
+import { LifeFlowLogo } from "@/shared";
 import styles from "./Footer.module.css";
 import Image from "next/image";
 import xIcon from "@/../public/images/x-logog.png";
@@ -22,33 +22,36 @@ export default function Footer() {
                             alt="x-icon"
                             width={FOOTER_LOGO_WIDTH}
                             height={FOOTER_LOGO_HEIGHT}
+                            loading="lazy"
                         />
                         <Image
                             src={instagramIcon}
                             alt="instagram-icon"
                             width={FOOTER_LOGO_WIDTH}
                             height={FOOTER_LOGO_HEIGHT}
+                            loading="lazy"
                         />
                         <Image
                             src={telegramIcon}
                             alt="telegram-icon"
                             width={FOOTER_LOGO_WIDTH}
                             height={FOOTER_LOGO_HEIGHT}
+                            loading="lazy"
                         />
                     </div>
                 </div>
-                <ul className={styles.info}>
+                <div className={styles.info}>
                     {INFOS.map(({ label, texts }) => (
-                        <li key={label}>
-                            <strong>{label}</strong>
+                        <nav key={label} aria-label={label}>
+                            <h3>{label}</h3>
                             {texts.map(({ label, to }) => (
                                 <a href={to} key={label}>
                                     {label}
                                 </a>
                             ))}
-                        </li>
+                        </nav>
                     ))}
-                </ul>
+                </div>
             </div>
             <p>© 2026 LiteFlow. All rights reserved.</p>
         </footer>

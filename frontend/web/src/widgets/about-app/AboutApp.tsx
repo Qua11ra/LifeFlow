@@ -1,8 +1,8 @@
-import { DreamCard } from "@/shared/ui";
+import { DreamCard } from "@/shared";
 import styles from "./AboutApp.module.css";
 import DREAMCARD_EXAMPLE_BACKGROUND from "@/../public/images/Landing_AboutApp_Card-background.png";
 import GoUpButton from "@/features/goUp/GoUpButton";
-import SquareLine from "@/shared/ui/square-line/SquareLine";
+import SquareLine from "@/shared/ui/components/square-line/SquareLine";
 
 const DREAMCARD_EXAMPLE_LABEL = "Move to Japan",
     DREAMCARD_EXAMPLE_PERCENT = 76,
@@ -14,8 +14,8 @@ const DREAMCARD_EXAMPLE_LABEL = "Move to Japan",
 export default function AboutApp() {
     return (
         <section id="about-app" className={styles.aboutApp_section}>
-            <h4>About app</h4>
-            <h2>Your travel to the dream</h2>
+            <h2>About app</h2>
+            <h3>Your travel to the dream</h3>
             <SquareLine />
             <div className={styles.main}>
                 <div>
