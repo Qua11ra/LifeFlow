@@ -1,4 +1,4 @@
-import { DreamCard } from "@/shared";
+import { DreamCard } from "@/entities";
 import styles from "./AboutApp.module.css";
 import DREAMCARD_EXAMPLE_BACKGROUND from "@/../public/images/Landing_AboutApp_Card-background.png";
 import GoUpButton from "@/features/goUp/GoUpButton";
@@ -31,6 +31,7 @@ export default function AboutApp() {
                     </p>
                 </div>
                 <DreamCard
+                    forLanding={true}
                     background={DREAMCARD_EXAMPLE_BACKGROUND}
                     label={DREAMCARD_EXAMPLE_LABEL}
                     currentStep={DREAMCARD_EXAMPLE_CURRENT_STEP}

@@ -1,0 +1,25 @@
+.button {
+    border: none;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: opacity 200ms;
+}
+
+.button:hover {
+    opacity: 0.7;
+}
+
+.ghost {
+    background: none;
+    padding: 0.5rem;
+}
+
+.plus {
+    background: var(--sidebar-plus-background);
+    border-radius: 50%;
+    width: 3.5rem;
+    height: 3.5rem;
+    padding: 0;
+}

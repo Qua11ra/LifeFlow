@@ -2,6 +2,9 @@
     font-family: var(--font-family-primary);
     letter-spacing: var(--spacing-primary);
     color: var(--color-text-primary);
+}
+
+* {
     box-sizing: border-box;
 }
 

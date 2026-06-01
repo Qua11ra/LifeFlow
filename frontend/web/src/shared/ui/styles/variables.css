@@ -1,5 +1,8 @@
 :root {
     --app-background-color: #fff;
+    
+    --sidebar-color: #fff;
+    --sidebar-plus-background: #20294620;
 
     --color-primary: #4883e4;
     --color-secondary: #fff;

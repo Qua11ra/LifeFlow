@@ -7,6 +7,7 @@ interface IDreamCardProps {
     percent: number;
     currentStep: number;
     totalStepCount: number;
+    forLanding?: boolean;
 }
 
 export default function DreamCard({
@@ -15,9 +16,10 @@ export default function DreamCard({
     percent,
     currentStep,
     totalStepCount,
+    forLanding = false
 }: IDreamCardProps) {
     return (
-        <div className={styles.card}>
+        <div className={`${styles.card} ${forLanding && 'landing_card'}`}>
             <Image
                 src={background}
                 alt=""

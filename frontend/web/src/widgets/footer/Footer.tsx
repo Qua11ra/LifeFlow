@@ -14,7 +14,7 @@ export default function Footer() {
         <footer className={styles.footer_section}>
             <div className={styles.main}>
                 <div className={styles.logos}>
-                    <LifeFlowLogo />
+                    <LifeFlowLogo heigth={55} width={200} />
                     <p>Your compass on the way to the dreams and big goals</p>
                     <div className={styles.icons}>
                         <Image

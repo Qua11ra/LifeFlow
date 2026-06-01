@@ -1,0 +1,27 @@
+body {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    flex-direction: column-reverse;
+
+    & > .main {
+        flex-grow: 1;
+        padding: 3rem;
+
+        & > .title > p {
+            display: none;
+            margin-left: 1rem;
+        }
+    }
+}
+
+
+@media (width > 768px) {
+    body {
+        flex-direction: row;
+
+        & > .main > .title > p {
+            display: block;
+        }
+    }
+}
