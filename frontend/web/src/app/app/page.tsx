@@ -1,3 +1,4 @@
+import { Dashboard } from "@/widgets";
 import styles from "./page.module.css";
 
 export default function AppPage() {
@@ -7,8 +8,7 @@ export default function AppPage() {
                 <h1>Your dreams</h1>
                 <p>All your goals in one place</p>
             </div>
-            {/* <Search />
-        <DreamCards /> */}
+            <Dashboard />
         </main>
     );
 }

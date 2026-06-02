@@ -1,5 +1,6 @@
 .button {
     border: none;
+    background: none;
     cursor: pointer;
     display: flex;
     align-items: center;
@@ -16,10 +17,16 @@
     padding: 0.5rem;
 }
 
-.plus {
+.button[aria-label="Add"] {
     background: var(--sidebar-plus-background);
     border-radius: 50%;
     width: 3.5rem;
     height: 3.5rem;
     padding: 0;
+}
+
+@media (width > 768px) {
+    .button.mobile {
+        display: none;
+    }
 }

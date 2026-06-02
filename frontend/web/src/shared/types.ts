@@ -10,3 +10,8 @@ export interface ICard {
     label: string;
     text: string;
 }
+
+export interface IIconProps {
+    fill?: string;
+    size?: number;
+}

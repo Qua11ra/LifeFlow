@@ -1,75 +1,101 @@
-.card {
+.dream_card {
     position: relative;
-    min-height: fit-content;
-    min-width: fit-content;
-    display: flex;
+    width: 100%;
+    min-height: 10rem;
+    border-radius: var(--radius-md);
+    box-shadow: var(--box-shadow-sm);
 
-    border-radius: var(--radius-sm);
-    padding: 2rem;
+    transition: transform 100ms ease-in-out;
+    cursor: pointer;
+    padding: clamp(1rem, 3vw, 3rem);
+    aspect-ratio: 3 / 1;
 
     & > .background {
         position: absolute;
+        z-index: -1;
+
+        top: 0;
+        left: 0;
         width: 100%;
         height: 100%;
-        z-index: -1;
-        bottom: 0;
-        right: 0;
-        object-fit: cover;
-        border-radius: var(--radius-sm);
+        border-radius: var(--radius-md);
     }
 
-    & > .info {
-        align-self: flex-end;
+    & > .description {
         width: 100%;
         height: 100%;
-        background-color: #ffffff99;
-        text-align: start;
-        padding: 1.5rem;
-        border-radius: var(--radius-sm);
         display: flex;
         flex-direction: column;
         justify-content: space-between;
-        color: var(--color-text-in-background);
+        gap: 1rem;
 
-        & > .label {
-            font-weight: 800;
-            font-size: 1rem;
-            white-space: 1rem;
+        & > p {
+            display: none;
+        }
+
+        & > div {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
         }
 
         & .progress {
-            display: flex;
-            align-items: center;
-            gap: 0.5rem;
+            width: 15rem;
+            height: 0.6rem;
+            border-radius: var(--radius-xl);
+            background-color: var(--progress-color);
 
-            & > .line {
-                width: 100%;
-                height: 0.5rem;
-                background-color: #d4d4d4;
-                border-radius: var(--radius-sm);
+            & > .filled {
+                height: 100%;
+                background-color: var(--color-primary);
+                border-radius: var(--radius-xl);
+            }
+        }
 
-                & > .line_filled {
-                    width: 76%;
-                    height: 0.5rem;
-                    background-color: var(--color-primary);
-                    border-radius: var(--radius-sm);
-                }
+        & .favorite_button {
+            border: none;
+            width: 2rem;
+            height: 2rem;
+            border-radius: 0.5rem;
+
+            background-color: var(--progress-color);
+
+            &.active {
+                background-color: #ffff5550;
             }
         }
     }
 }
 
 @media (width > 768px) {
-    .card {
-        min-width: clamp(25rem, 60vw, 45rem);
-        min-height: 20rem;
+    .dream_card {
+        width: 20rem;
+        height: 30rem;
+        padding: 0;
 
-        & > .info {
-            width: 65%;
-            height: 45%;
+        &:hover {
+            transform: scale(1.01);
+        }
 
-            & > .label {
-                font-size: 2rem;
+        & > .background {
+            position: static;
+            width: 100%;
+            height: 40%;
+            border-bottom-left-radius: 0;
+            border-bottom-right-radius: 0;
+        }
+
+        & > .description {
+            height: 60%;
+            padding: 1.5rem;
+
+            & > p {
+                display: block;
+                flex-grow: 1;
+            }
+
+            & > div:last-child {
+                justify-content: space-between;
             }
         }
     }

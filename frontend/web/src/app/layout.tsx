@@ -19,7 +19,7 @@ export default async function RootLayout({
 }>) {
     const theme = (await cookies()).get("theme")?.value || "light";
     return (
-        <html lang="en" data-theme={theme}>
+        <html lang="en" data-theme={theme} data-scroll-behavior="smooth">
             <body>
                 {children}
             </body>

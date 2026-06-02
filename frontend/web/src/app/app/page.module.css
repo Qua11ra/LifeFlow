@@ -3,10 +3,13 @@ body {
     height: 100vh;
     display: flex;
     flex-direction: column-reverse;
-
+    
     & > .main {
+        gap: 3rem;
+        display: flex;
+        flex-direction: column;
         flex-grow: 1;
-        padding: 3rem;
+        padding: clamp(.5rem, 5vw, 3rem);
 
         & > .title > p {
             display: none;

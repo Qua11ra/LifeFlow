@@ -1,13 +1,9 @@
-import { DreamCard } from "@/entities";
 import styles from "./AboutApp.module.css";
-import DREAMCARD_EXAMPLE_BACKGROUND from "@/../public/images/Landing_AboutApp_Card-background.png";
 import GoUpButton from "@/features/goUp/GoUpButton";
 import SquareLine from "@/shared/ui/components/square-line/SquareLine";
+import { BigLandingCard } from "@/shared/ui/components/landing-card/LandingCards";
 
-const DREAMCARD_EXAMPLE_LABEL = "Move to Japan",
-    DREAMCARD_EXAMPLE_PERCENT = 76,
-    DREAMCARD_EXAMPLE_CURRENT_STEP = 5,
-    DREAMCARD_EXAMPLE_TOTAL_STEP_COUNT = 7;
+
 
 //TODO write a normal description
 
@@ -30,14 +26,7 @@ export default function AboutApp() {
                         consciously
                     </p>
                 </div>
-                <DreamCard
-                    forLanding={true}
-                    background={DREAMCARD_EXAMPLE_BACKGROUND}
-                    label={DREAMCARD_EXAMPLE_LABEL}
-                    currentStep={DREAMCARD_EXAMPLE_CURRENT_STEP}
-                    totalStepCount={DREAMCARD_EXAMPLE_TOTAL_STEP_COUNT}
-                    percent={DREAMCARD_EXAMPLE_PERCENT}
-                />
+                <BigLandingCard />
             </div>
             <GoUpButton />
         </section>

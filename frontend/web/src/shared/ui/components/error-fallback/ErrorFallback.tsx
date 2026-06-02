@@ -9,20 +9,17 @@ interface ErrorFallbackProps {
 }
 
 export default function ErrorFallback({ title }: ErrorFallbackProps) {
-    const router = useRouter()
-
-    function handleClick() {
-        router.back()
-    }
+    const router = useRouter();
 
     return (
         <main className={styles.not_found_section}>
             <LifeFlowLogo width={310} heigth={80} />
             <section className={styles.info}>
                 <h1>{title}</h1>
-                <Button onClick={handleClick}>
-                    Go back
-                </Button>
+                <div className={styles.buttons}>
+                    <Button onClick={() => router.back()}>Go back</Button>
+                    <Button onClick={() => router.refresh()}>Refresh page</Button>
+                </div>
                 <SwitchThemeIcon />
             </section>
         </main>

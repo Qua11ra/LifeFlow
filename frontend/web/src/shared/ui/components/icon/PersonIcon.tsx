@@ -1,11 +1,14 @@
-import { FILL_ICON_COLOR } from "@/shared";
+import { FILL_ICON_COLOR, IIconProps } from "@/shared";
 
 interface IconProps {
     fill?: string;
     size?: number;
 }
 
-export default function PersonIcon({ fill = FILL_ICON_COLOR, size = 24 }: IconProps) {
+export default function PersonIcon({
+    fill = FILL_ICON_COLOR,
+    size = 24,
+}: IIconProps) {
     return (
         <svg
             xmlns="http://www.w3.org/2000/svg"
