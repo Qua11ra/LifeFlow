@@ -2,7 +2,7 @@
 import Image, { StaticImageData } from "next/image";
 import DEFAULT_BACKGROUND from "@/../public/images/Landing_AboutApp_Card-background.png";
 import styles from "./DreamCard.module.css";
-import KidStarIcon from "@/shared/ui/components/icon/KidStar";
+import { KidStarIcon } from "@/shared";
 import { ACTIVE_STAR_COLOR, FILL_ICON_COLOR } from "@/shared";
 import { useState } from "react";
 
@@ -15,8 +15,17 @@ interface IDreamCardProps {
     isFavorite: boolean;
 }
 
+const LABEL_LENGTH = 35, DESCRIPTION_LENGTH = 60;
+
 function getPercentageOfDream(currentStep: number, stepsCount: number) {
     return Math.floor((currentStep / stepsCount) * 100);
+}
+
+function truncateText(originalText: string, truncatedTextLength: number) {
+    if (originalText.length <= truncatedTextLength) return originalText;
+
+    const result = `${originalText.slice(0, truncatedTextLength)}...`;
+    return result;
 }
 
 export default function DreamCard({
@@ -30,9 +39,12 @@ export default function DreamCard({
     const [isFavorite, setFavorite] = useState(active);
     const PERCENTAGE = getPercentageOfDream(currentStep, stepsCount);
     const FILL_COLOR = isFavorite ? ACTIVE_STAR_COLOR : FILL_ICON_COLOR;
-    
+
+    label = truncateText(label, LABEL_LENGTH);
+    description = truncateText(description, DESCRIPTION_LENGTH)
+
     function handleSwitchFavorite() {
-        setFavorite(prev => !prev)
+        setFavorite((prev) => !prev);
     }
 
     return (
@@ -62,7 +74,7 @@ export default function DreamCard({
                         {currentStep} of {stepsCount} steps
                     </p>
                     <button
-                    onClick={handleSwitchFavorite}
+                        onClick={handleSwitchFavorite}
                         className={`${styles.favorite_button} ${isFavorite && styles.active}`}
                     >
                         <KidStarIcon fill={FILL_COLOR} />

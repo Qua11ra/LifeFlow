@@ -1,19 +1,20 @@
 :root {
     --app-background-color: #fff;
-    
     --sidebar-color: #fff;
-    --sidebar-plus-background: #20294620;
-    --progress-color: #20294620;
-
+    
     --color-primary: #4883e4;
     --color-secondary: #fff;
     --color-thirty: #8224f6;
+    --color-fourty: #20294620;
     --color-error: #ef4444;
     --color-text-primary: #202946;
-    --color-text-secondary: var(--color-thirty);
     --color-text-light: #fff;
     --color-text-in-background: #202946;
 
+    --color-white: #fff;
+    
+    --sidebar-plus-background: var(--color-fourty);
+    --progress-color: var(--color-fourty);
     --spacing-primary: -0.01rem;
 
     --font-family-primary: "ElmaSans", system-ui, sans-serif;
@@ -48,6 +49,7 @@
     --radius-md: 1.5rem;
     --radius-xl: 3rem;
 
+    --border: 1px solid var(--color-fourty);
     --box-shadow-sm: 0 0 1rem rgba(0, 0, 0, 0.1);
 
     --button-border-radius: var(--radius-sm);

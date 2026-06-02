@@ -1,5 +1,10 @@
 import { ReactNode } from "react";
 
+export type Option = {
+    value: string,
+    label: string
+}
+
 export interface IChildrenProps {
     children: ReactNode
 }

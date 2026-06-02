@@ -1,0 +1,14 @@
+.select {
+    background: none;
+    cursor: pointer;
+    border: var(--border);
+    padding: .5rem;
+    border-radius: var(--radius-mini);
+    background-color: var(--color-white);
+
+    font-size: var(--font-p-size);
+
+    & > .option {
+        cursor: pointer;
+    }
+}

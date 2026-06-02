@@ -7,8 +7,7 @@ export default function SidebarButton({
     icon,
     label,
     href,
-    fn,
-    onlyMobile = '',
+    fn
 }: ISidebarButton) {
     const router = useRouter();
 
@@ -23,7 +22,7 @@ export default function SidebarButton({
 
     return (
         <button
-            className={`${styles.button} ${styles[onlyMobile]}`}
+            className={styles.button}
             onClick={handleClick}
             aria-label={label}
             type="button"

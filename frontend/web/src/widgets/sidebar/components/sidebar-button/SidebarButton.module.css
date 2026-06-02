@@ -24,9 +24,3 @@
     height: 3.5rem;
     padding: 0;
 }
-
-@media (width > 768px) {
-    .button.mobile {
-        display: none;
-    }
-}

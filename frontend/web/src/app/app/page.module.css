@@ -3,13 +3,14 @@ body {
     height: 100vh;
     display: flex;
     flex-direction: column-reverse;
-    
+
     & > .main {
+        height: 90%;
         gap: 3rem;
         display: flex;
         flex-direction: column;
-        flex-grow: 1;
-        padding: clamp(.5rem, 5vw, 3rem);
+        overflow-y: scroll;
+        padding: clamp(0.5rem, 5vw, 3rem);
 
         & > .title > p {
             display: none;
@@ -18,13 +19,17 @@ body {
     }
 }
 
-
 @media (width > 768px) {
     body {
         flex-direction: row;
 
-        & > .main > .title > p {
-            display: block;
+        & > .main {
+            height: 100%;
+            width: 90%;
+            flex-grow: 1;
+            & > .title > p {
+                display: block;
+            }
         }
     }
 }

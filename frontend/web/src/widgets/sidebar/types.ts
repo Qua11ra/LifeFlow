@@ -4,5 +4,4 @@ export interface ISidebarButton {
     icon: ReactNode;
     href?: string;
     fn?: () => void;
-    onlyMobile?: 'mobile' | "";
 }

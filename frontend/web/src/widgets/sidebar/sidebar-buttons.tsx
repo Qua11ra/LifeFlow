@@ -3,7 +3,7 @@ import { ISidebarButton } from "./types";
 
 export const SIDEBAR_BUTTONS: ISidebarButton[] = [
     { label: "Home", icon: <HomeIcon size={30} />, href: "/app" },
-    { label: "Add", icon: <PlusIcon size={30} />, onlyMobile: "mobile" },
+    { label: "Add", icon: <PlusIcon size={30} /> },
     { label: "Profile", icon: <PersonIcon size={30} /> },
 ];
 

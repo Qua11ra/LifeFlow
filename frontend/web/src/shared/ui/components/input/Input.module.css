@@ -1,0 +1,24 @@
+.background {
+    display: flex;
+    align-items: center;
+    gap: .5rem;
+    padding: .5rem;
+    border-radius: var(--radius-mini);
+    border: var(--border);
+    background-color: var(--color-white);
+
+    & > .button {
+        background: none;
+        border: none;
+    }
+
+    & > .input {
+        border: none;
+        width: 10rem;
+        font-size: var(--font-p-size);
+
+        &:focus {
+            outline: none;
+        }
+    }
+}
