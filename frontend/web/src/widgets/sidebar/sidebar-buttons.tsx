@@ -1,5 +1,5 @@
 import { HomeIcon, PersonIcon, PlusIcon } from "@/shared";
-import { ISidebarButton } from "./types";
+import type { ISidebarButton } from "./types";
 
 export const SIDEBAR_BUTTONS: ISidebarButton[] = [
     { label: "Home", icon: <HomeIcon size={30} />, href: "/app" },

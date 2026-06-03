@@ -1,8 +1,8 @@
-import manIcon from "@/../public/images/man.png";
-import womanIcon from "@/../public/images/woman.png";
-import pandaIcon from "@/../public/images/panda.png";
-import starRatingIcon from "@/../public/icons/star_rating-icon.svg";
 import Image from "next/image";
+import starRatingIcon from "@/../public/icons/star_rating-icon.svg";
+import manIcon from "@/../public/images/man.png";
+import pandaIcon from "@/../public/images/panda.png";
+import womanIcon from "@/../public/images/woman.png";
 import styles from "./HeroReviews.module.css";
 
 const ICONS = [manIcon, womanIcon, pandaIcon];

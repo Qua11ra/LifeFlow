@@ -1,0 +1,29 @@
+.avatar {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+
+    & > label {
+        font-weight: var(--font-strong-weight);
+        font-size: var(--font-p-size);
+    }
+}
+
+.fileInput {
+    border: var(--border);
+    border-radius: var(--radius-mini);
+    padding: 0.5rem;
+    font-size: var(--font-p-size);
+    font-family: var(--font-family-primary);
+    color: var(--color-text-primary);
+    background-color: var(--color-white);
+}
+
+.buttons {
+    display: flex;
+    gap: 1rem;
+
+    & > * {
+        flex: 1;
+    }
+}

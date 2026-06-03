@@ -1,8 +1,8 @@
+import { GoUpButton } from "@/features";
 import { LandingCard } from "@/shared";
+import SquareLine from "@/shared/ui/components/square-line/SquareLine";
 import { FEATURES_CARDS_LIST } from "./cards";
 import styles from "./Features.module.css";
-import GoUpButton from "@/features/goUp/GoUpButton";
-import SquareLine from "@/shared/ui/components/square-line/SquareLine";
 
 export default function Features() {
     return (

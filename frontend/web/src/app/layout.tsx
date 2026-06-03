@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
-import type { ReactNode } from "react";
 import { cookies } from "next/headers";
+import type { ReactNode } from "react";
 import "@/shared/ui/styles/reset.css";
 import "@/shared/ui/styles/fonts.css";
 import "@/shared/ui/styles/variables.css";
@@ -20,9 +20,7 @@ export default async function RootLayout({
     const theme = (await cookies()).get("theme")?.value || "light";
     return (
         <html lang="en" data-theme={theme} data-scroll-behavior="smooth">
-            <body>
-                {children}
-            </body>
+            <body>{children}</body>
         </html>
     );
 }

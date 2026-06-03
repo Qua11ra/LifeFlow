@@ -1,8 +1,8 @@
 "use client";
-import { Button, LifeFlowLogo } from "@/shared/";
-import SwitchThemeIcon from "@/features/switch-theme/SwitchThemeIcon";
-import styles from "./ErrorFallback.module.css";
 import { useRouter } from "next/navigation";
+import { SwitchThemeIcon } from "@/features";
+import { Button, LifeFlowLogo } from "@/shared/";
+import styles from "./ErrorFallback.module.css";
 
 interface ErrorFallbackProps {
     title: string;
@@ -18,7 +18,9 @@ export default function ErrorFallback({ title }: ErrorFallbackProps) {
                 <h1>{title}</h1>
                 <div className={styles.buttons}>
                     <Button onClick={() => router.back()}>Go back</Button>
-                    <Button onClick={() => router.refresh()}>Refresh page</Button>
+                    <Button onClick={() => router.refresh()}>
+                        Refresh page
+                    </Button>
                 </div>
                 <SwitchThemeIcon />
             </section>

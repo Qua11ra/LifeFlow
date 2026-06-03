@@ -1,8 +1,8 @@
 import AboutApp from "./about-app/AboutApp";
+import Dashboard from "./dashboard/Dashboard";
 import Features from "./features/Features";
 import Footer from "./footer/Footer";
 import Hero from "./hero/Hero";
 import HowItWorks from "./how-it-works/HowItWorks";
-import Dashboard from "./dashboard/Dashboard";
 
 export { AboutApp, Features, Footer, Hero, HowItWorks, Dashboard };

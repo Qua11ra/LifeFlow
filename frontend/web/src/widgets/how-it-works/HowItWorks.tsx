@@ -1,8 +1,8 @@
-import styles from "./HowItWorks.module.css";
+import { GoToUpButton } from "@/features";
 import { SquareLine } from "@/shared";
-import { HOW_IT_WORKS_STEPS } from "./steps";
 import HowItWorksStep from "./components/HowItWorksStep";
-import GoToUpButton from "@/features/goToApp/GoToAppButton";
+import styles from "./HowItWorks.module.css";
+import { HOW_IT_WORKS_STEPS } from "./steps";
 
 export default function HowItWorks() {
     return (

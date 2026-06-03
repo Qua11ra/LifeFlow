@@ -3,7 +3,7 @@
     flex-direction: column;
     flex-grow: 1;
     gap: 2rem;
-    
+
     & > .filters {
         align-self: flex-end;
         display: flex;

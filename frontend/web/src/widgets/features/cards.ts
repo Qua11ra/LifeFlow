@@ -1,8 +1,8 @@
-import flagIcon from "@/../public/icons/flag-icon.svg";
+import chartIcon from "@/../public/icons/chart-icon.svg";
 import checkIcon from "@/../public/icons/check-icon.svg";
 import documentIcon from "@/../public/icons/document-icon.svg";
-import chartIcon from "@/../public/icons/chart-icon.svg";
-import { ICard } from "@/shared/";
+import flagIcon from "@/../public/icons/flag-icon.svg";
+import type { ICard } from "@/shared/";
 
 export const FEATURES_CARDS_LIST: ICard[] = [
     {

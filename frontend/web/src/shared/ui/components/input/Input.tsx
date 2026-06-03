@@ -1,8 +1,9 @@
-import { InputHTMLAttributes, ReactNode } from "react";
+import type { InputHTMLAttributes, ReactNode } from "react";
 import styles from "./Input.module.css";
 
 interface IInputProps extends InputHTMLAttributes<HTMLInputElement> {
     icon?: ReactNode;
+    fn?: () => void;
 }
 
 export default function Input({ icon, fn, ...props }: IInputProps) {

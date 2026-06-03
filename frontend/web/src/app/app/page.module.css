@@ -4,9 +4,9 @@ body {
     display: flex;
     flex-direction: column-reverse;
 
-    & > .main {
+    & > main {
         height: 90%;
-        gap: 3rem;
+        gap: 1rem;
         display: flex;
         flex-direction: column;
         overflow-y: scroll;
@@ -14,7 +14,6 @@ body {
 
         & > .title > p {
             display: none;
-            margin-left: 1rem;
         }
     }
 }
@@ -23,7 +22,7 @@ body {
     body {
         flex-direction: row;
 
-        & > .main {
+        & > main {
             height: 100%;
             width: 90%;
             flex-grow: 1;

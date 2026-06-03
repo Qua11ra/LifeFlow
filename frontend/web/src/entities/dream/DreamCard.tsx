@@ -1,86 +1,49 @@
 "use client";
-import Image, { StaticImageData } from "next/image";
-import DEFAULT_BACKGROUND from "@/../public/images/Landing_AboutApp_Card-background.png";
-import styles from "./DreamCard.module.css";
-import { KidStarIcon } from "@/shared";
-import { ACTIVE_STAR_COLOR, FILL_ICON_COLOR } from "@/shared";
+import { useRouter } from "next/navigation";
 import { useState } from "react";
+import { ACTIVE_STAR_COLOR, FILL_ICON_COLOR, KidStarIcon } from "@/shared";
+import styles from "./DreamCard.module.css";
+import type { IDreamCardVisualProps } from "./DreamCardView";
+import DreamCardView from "./DreamCardView";
 
-interface IDreamCardProps {
-    background?: StaticImageData;
-    label: string;
-    description: string;
-    currentStep: number;
-    stepsCount: number;
+export interface IDreamCardProps extends IDreamCardVisualProps {
+    id: string;
     isFavorite: boolean;
 }
 
-const LABEL_LENGTH = 35, DESCRIPTION_LENGTH = 60;
-
-function getPercentageOfDream(currentStep: number, stepsCount: number) {
-    return Math.floor((currentStep / stepsCount) * 100);
-}
-
-function truncateText(originalText: string, truncatedTextLength: number) {
-    if (originalText.length <= truncatedTextLength) return originalText;
-
-    const result = `${originalText.slice(0, truncatedTextLength)}...`;
-    return result;
-}
-
 export default function DreamCard({
-    background,
-    label,
-    description,
-    currentStep,
-    stepsCount,
-    isFavorite: active,
+    id,
+    isFavorite,
+    ...rest
 }: IDreamCardProps) {
-    const [isFavorite, setFavorite] = useState(active);
-    const PERCENTAGE = getPercentageOfDream(currentStep, stepsCount);
-    const FILL_COLOR = isFavorite ? ACTIVE_STAR_COLOR : FILL_ICON_COLOR;
+    const router = useRouter();
+    const [isActiveFavorite, setActiveFavorite] = useState(isFavorite);
+    const FILL_COLOR = isActiveFavorite ? ACTIVE_STAR_COLOR : FILL_ICON_COLOR;
 
-    label = truncateText(label, LABEL_LENGTH);
-    description = truncateText(description, DESCRIPTION_LENGTH)
+    function handleClick() {
+        router.push(`app/dream/${id}`);
+    }
 
-    function handleSwitchFavorite() {
-        setFavorite((prev) => !prev);
+    function handleSwitchFavorite(
+        e: React.MouseEvent<HTMLButtonElement, MouseEvent>,
+    ) {
+        e.stopPropagation();
+        setActiveFavorite((prev) => !prev);
     }
 
     return (
-        <article
-            aria-labelledby="dream_card_label"
-            className={styles.dream_card}
-        >
-            <Image
-                src={background?.src || DEFAULT_BACKGROUND}
-                alt="dream_card_bg"
-                className={styles.background}
-            />
-            <div className={styles.description}>
-                <h3 id="dream_card_label">{label}</h3>
-                <p>{description}</p>
-                <div>
-                    <div className={styles.progress}>
-                        <div
-                            className={styles.filled}
-                            style={{ width: `${PERCENTAGE}%` }}
-                        ></div>
-                    </div>
-                    <p>{PERCENTAGE}%</p>
-                </div>
-                <div>
-                    <p>
-                        {currentStep} of {stepsCount} steps
-                    </p>
-                    <button
-                        onClick={handleSwitchFavorite}
-                        className={`${styles.favorite_button} ${isFavorite && styles.active}`}
-                    >
-                        <KidStarIcon fill={FILL_COLOR} />
-                    </button>
-                </div>
-            </div>
-        </article>
+        <DreamCardView
+            {...rest}
+            variant="desktop"
+            onClick={handleClick}
+            children={
+                <button
+                    onClick={handleSwitchFavorite}
+                    className={`${styles.favorite_button} ${isActiveFavorite && styles.active}`}
+                >
+                    <KidStarIcon fill={FILL_COLOR} />
+                </button>
+            }
+        />
     );
 }

@@ -1,9 +1,9 @@
 "use client";
-import styles from "./SecondaryLayout.module.css";
-import NavList from "./components/nav-list/NavList";
-import LifeFlowLogo from "@/shared/ui/components/lifeflow-logo/LifeFlowLogo";
-import SwitchThemeIcon from "@/features/switch-theme/SwitchThemeIcon";
+import { SwitchThemeIcon } from "@/features";
 import { useScrollY } from "@/shared";
+import LifeFlowLogo from "@/shared/ui/components/lifeflow-logo/LifeFlowLogo";
+import NavList from "./components/nav-list/NavList";
+import styles from "./SecondaryLayout.module.css";
 
 export default function SecondaryLayout() {
     const scrollY = useScrollY();

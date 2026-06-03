@@ -1,0 +1,119 @@
+.card {
+    position: relative;
+    width: 100%;
+    min-height: fit-content;
+    border-radius: var(--radius-md);
+    box-shadow: var(--box-shadow-sm);
+    color: var(--color-text-in-background);
+    text-align: start;
+
+    cursor: pointer;
+    padding: clamp(1rem, 3vw, 3rem);
+
+    transition: transform 100ms ease-in-out;
+
+    & > .background {
+        position: absolute;
+        z-index: -1;
+        background-size: cover;
+
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        border-radius: var(--radius-md);
+    }
+
+    & > .info {
+        width: 100%;
+        height: 100%;
+        min-height: fit-content;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        gap: 0.3rem;
+
+        & > h3 {
+            font-size: 1.5rem;
+            line-height: 2.2rem;
+        }
+
+        & > p {
+            font-size: 1rem;
+            display: none;
+            line-height: 2rem;
+        }
+
+        & > div {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+        }
+
+        & > .completed {
+            color: var(--color-completed);
+            & > .progress > .filled {
+                background-color: var(--color-completed);
+            }
+        }
+
+        & .progress {
+            width: 15rem;
+            height: 0.6rem;
+            border-radius: var(--radius-xl);
+            background-color: var(--progress-color);
+
+            & > .filled {
+                height: 100%;
+                background-color: var(--color-primary);
+                border-radius: var(--radius-xl);
+            }
+        }
+
+        & > div:last-child {
+            border-radius: var(--radius-mini);
+            padding-inline: 1rem;
+            padding-block: 0.5rem;
+            width: fit-content;
+            background-color: var(--color-fourty);
+        }
+    }
+}
+
+@media (width > 768px) {
+    .card.desktop {
+        background-color: var(--color-white);
+        width: 18rem;
+        height: 27rem;
+        padding: 0;
+
+        &:hover {
+            transform: scale(1.01);
+        }
+
+        & > .background {
+            position: static;
+            width: 100%;
+            height: 40%;
+            border-bottom-left-radius: 0;
+            border-bottom-right-radius: 0;
+        }
+
+        & > .info {
+            height: 60%;
+            padding: 1.2rem;
+
+            & > p {
+                display: block;
+                flex-grow: 1;
+            }
+
+            & > div:last-child {
+                justify-content: space-between;
+                background: none;
+                padding: 0;
+                width: 100%;
+            }
+        }
+    }
+}

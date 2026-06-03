@@ -2,7 +2,7 @@
     background: none;
     cursor: pointer;
     border: var(--border);
-    padding: .5rem;
+    padding: 0.5rem;
     border-radius: var(--radius-mini);
     background-color: var(--color-white);
 

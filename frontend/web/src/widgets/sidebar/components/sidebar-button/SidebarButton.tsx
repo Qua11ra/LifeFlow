@@ -1,13 +1,13 @@
 "use client";
 import { useRouter } from "next/navigation";
+import type { ISidebarButton } from "../../types";
 import styles from "./SidebarButton.module.css";
-import { ISidebarButton } from "../../types";
 
 export default function SidebarButton({
     icon,
     label,
     href,
-    fn
+    fn,
 }: ISidebarButton) {
     const router = useRouter();
 

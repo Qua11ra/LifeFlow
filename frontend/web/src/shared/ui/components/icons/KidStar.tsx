@@ -1,4 +1,4 @@
-import { IIconProps } from "@/shared";
+import type { IIconProps } from "@/shared";
 
 export default function KidStarIcon({ fill = "", size = 20 }: IIconProps) {
     return (

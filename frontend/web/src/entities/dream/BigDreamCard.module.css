@@ -1,0 +1,9 @@
+.big_card {
+    cursor: default;
+    height: clamp(20rem, 30vw, 25rem);
+    padding: clamp(1.5rem, 3vw, 2rem);
+
+    & .description {
+        display: block !important;
+    }
+}

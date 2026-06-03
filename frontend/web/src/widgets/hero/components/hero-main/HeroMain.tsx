@@ -1,5 +1,5 @@
+import { GoToUpButton } from "@/features";
 import styles from "./Heromain.module.css";
-import GoToUpButton from "@/features/goToApp/GoToAppButton";
 
 export default function HeroMain() {
     return (

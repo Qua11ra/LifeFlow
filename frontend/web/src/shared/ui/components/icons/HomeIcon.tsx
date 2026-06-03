@@ -1,6 +1,9 @@
-import { FILL_ICON_COLOR, IIconProps } from "@/shared";
+import { FILL_ICON_COLOR, type IIconProps } from "@/shared";
 
-export default function HomeIcon({ fill = FILL_ICON_COLOR, size = 24 }: IIconProps) {
+export default function HomeIcon({
+    fill = FILL_ICON_COLOR,
+    size = 24,
+}: IIconProps) {
     return (
         <svg
             xmlns="http://www.w3.org/2000/svg"

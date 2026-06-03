@@ -1,6 +1,9 @@
-import { IIconProps } from "@/shared";
+import type { IIconProps } from "@/shared";
 
-export default function SearchIcon({ fill = "#666666", size = 20 }: IIconProps) {
+export default function SearchIcon({
+    fill = "#666666",
+    size = 20,
+}: IIconProps) {
     return (
         <svg
             xmlns="http://www.w3.org/2000/svg"

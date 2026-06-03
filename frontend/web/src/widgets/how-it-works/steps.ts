@@ -1,8 +1,8 @@
-import { ILandingStepProps } from "./components/HowItWorksStep";
-import MountainImage from "@/../public/images/Landing_Mountain.png";
-import IslandsImage from "@/../public/images/Landing_Islands.png";
-import DocumentImage from "@/../public/images/Landing_Document.png";
 import CastleImage from "@/../public/images/Landing_Castle.png";
+import DocumentImage from "@/../public/images/Landing_Document.png";
+import IslandsImage from "@/../public/images/Landing_Islands.png";
+import MountainImage from "@/../public/images/Landing_Mountain.png";
+import type { ILandingStepProps } from "./components/HowItWorksStep";
 
 export const HOW_IT_WORKS_STEPS: ILandingStepProps[] = [
     {

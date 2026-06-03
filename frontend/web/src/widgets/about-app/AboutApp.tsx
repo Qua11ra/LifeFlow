@@ -1,9 +1,16 @@
-import styles from "./AboutApp.module.css";
-import GoUpButton from "@/features/goUp/GoUpButton";
+import { BigDreamCard } from "@/entities";
+import { GoUpButton } from "@/features";
 import SquareLine from "@/shared/ui/components/square-line/SquareLine";
-import { BigLandingCard } from "@/shared/ui/components/landing-card/LandingCards";
+import styles from "./AboutApp.module.css";
 
-
+const LANDING_DREAM_CARD_PROPS = {
+    id: "1",
+    label: "Go to Japan",
+    description: "Earn a money and learn japanese",
+    currentStep: 5,
+    stepsCount: 7,
+    isFavorite: true,
+};
 
 //TODO write a normal description
 
@@ -26,7 +33,7 @@ export default function AboutApp() {
                         consciously
                     </p>
                 </div>
-                <BigLandingCard />
+                <BigDreamCard {...LANDING_DREAM_CARD_PROPS} />
             </div>
             <GoUpButton />
         </section>

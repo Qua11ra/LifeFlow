@@ -1,4 +1,4 @@
-import { FILL_ICON_COLOR, IIconProps } from "@/shared";
+import { FILL_ICON_COLOR, type IIconProps } from "@/shared";
 
 interface IconProps {
     fill?: string;

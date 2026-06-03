@@ -1,4 +1,4 @@
-import { Hero, AboutApp, Features, HowItWorks, Footer } from "@/widgets";
+import { AboutApp, Features, Footer, Hero, HowItWorks } from "@/widgets";
 import styles from "./page.module.css";
 
 export default function Landing() {

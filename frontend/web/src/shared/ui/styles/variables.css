@@ -1,7 +1,7 @@
 :root {
     --app-background-color: #fff;
     --sidebar-color: #fff;
-    
+
     --color-primary: #4883e4;
     --color-secondary: #fff;
     --color-thirty: #8224f6;
@@ -12,7 +12,8 @@
     --color-text-in-background: #202946;
 
     --color-white: #fff;
-    
+    --color-completed: #00ff4c;
+
     --sidebar-plus-background: var(--color-fourty);
     --progress-color: var(--color-fourty);
     --spacing-primary: -0.01rem;
@@ -44,7 +45,7 @@
     --font-strong-size: 1.25rem;
     --font-strong-line-height: 2rem;
 
-    --radius-mini: .5rem;
+    --radius-mini: 0.5rem;
     --radius-sm: 1.25rem;
     --radius-md: 1.5rem;
     --radius-xl: 3rem;

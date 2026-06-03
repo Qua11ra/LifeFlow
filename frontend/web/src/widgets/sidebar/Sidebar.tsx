@@ -1,8 +1,8 @@
-import styles from "./Sidebar.module.css";
-import SidebarButton from "./components/sidebar-button/SidebarButton";
+import { SwitchThemeIcon } from "@/features";
 import { LifeFlowLogo } from "@/shared";
+import SidebarButton from "./components/sidebar-button/SidebarButton";
+import styles from "./Sidebar.module.css";
 import { SIDEBAR_BUTTONS } from "./sidebar-buttons";
-import SwitchThemeIcon from "@/features/switch-theme/SwitchThemeIcon";
 
 export default function Sidebar() {
     return (
@@ -15,7 +15,7 @@ export default function Sidebar() {
                     <SidebarButton key={btn.label} {...btn} />
                 ))}
             </nav>
-                <SwitchThemeIcon />
+            <SwitchThemeIcon />
         </aside>
     );
 }

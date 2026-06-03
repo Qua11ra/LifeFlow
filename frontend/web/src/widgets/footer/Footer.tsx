@@ -1,9 +1,9 @@
-import { LifeFlowLogo } from "@/shared";
-import styles from "./Footer.module.css";
 import Image from "next/image";
-import xIcon from "@/../public/images/x-logog.png";
 import instagramIcon from "@/../public/icons/instagram-icon.svg";
 import telegramIcon from "@/../public/icons/telegram-icon.svg";
+import xIcon from "@/../public/images/x-logog.png";
+import { LifeFlowLogo } from "@/shared";
+import styles from "./Footer.module.css";
 import { INFOS } from "./infos";
 
 const FOOTER_LOGO_WIDTH = 20,

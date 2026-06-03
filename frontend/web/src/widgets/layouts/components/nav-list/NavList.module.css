@@ -3,9 +3,9 @@
     background-color: #fff;
     border-radius: 1rem;
     padding: 1rem;
-    & > li {
-        list-style: none;
-        min-width: fit-content;
+
+    & > a {
+        color: var(--color-text-in-background);
     }
 }
 
@@ -13,6 +13,6 @@
     .nav_list {
         display: flex;
         align-items: center;
-        gap: 1.5rem;
+        gap: 2rem;
     }
 }

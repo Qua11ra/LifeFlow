@@ -1,5 +1,5 @@
-import { NAV_LIST } from "./navList";
 import styles from "./NavList.module.css";
+import { NAV_LIST } from "./navList";
 
 export default function NavList() {
     return (

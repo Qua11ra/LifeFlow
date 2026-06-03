@@ -1,5 +1,5 @@
 "use client";
-import { ReactNode, ButtonHTMLAttributes } from "react";
+import type { ButtonHTMLAttributes, ReactNode } from "react";
 import styles from "./Button.module.css";
 
 interface IButtonProps extends ButtonHTMLAttributes<HTMLButtonElement> {
@@ -23,7 +23,7 @@ export default function Button({
         <button
             data-size={size}
             type={type}
-            className={`${styles.button} ${styles[size]} ${className || ""}`}
+            className={`${styles.button} ${styles[size]} ${variant === "outline" ? styles.outline : ""} ${className || ""}`}
             onClick={onClick}
             {...restProps}
         >

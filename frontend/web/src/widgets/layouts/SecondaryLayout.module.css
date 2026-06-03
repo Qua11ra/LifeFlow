@@ -4,10 +4,10 @@
     left: 0;
     top: 0;
     width: 100vw;
-    
+
     & > .collapsed {
         padding-block: 2rem;
-        padding-inline: clamp(.5rem, 5vw, 3rem);
+        padding-inline: clamp(0.5rem, 5vw, 3rem);
         width: 100%;
         display: flex;
         justify-content: space-between;
