@@ -1,5 +1,5 @@
+import { SquareLine } from "@repo/ui";
 import { GoToUpButton } from "@/features";
-import { SquareLine } from "@/shared";
 import HowItWorksStep from "./components/HowItWorksStep";
 import styles from "./HowItWorks.module.css";
 import { HOW_IT_WORKS_STEPS } from "./steps";

@@ -1,6 +1,24 @@
 "use client";
-import { ErrorFallback } from "@/shared/";
+import { ErrorFallback, LifeFlowLogo } from "@repo/ui";
+import { useRouter } from "next/navigation";
+import { SwitchThemeIcon } from "@/features";
 
 export default function Error() {
-    return <ErrorFallback title="Error, try again :(" />;
+    const router = useRouter();
+    return (
+        <ErrorFallback
+            title="Error, try again :("
+            onGoBack={() => router.back()}
+            onRefresh={() => router.refresh()}
+            logo={
+                <LifeFlowLogo
+                    src="/icons/LifeFlow-full_logo.png"
+                    alt="LifeFlow"
+                    width={310}
+                    height={80}
+                />
+            }
+            themeSwitcher={<SwitchThemeIcon />}
+        />
+    );
 }

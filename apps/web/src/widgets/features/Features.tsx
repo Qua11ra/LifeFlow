@@ -1,6 +1,5 @@
+import { LandingCard, SquareLine } from "@repo/ui";
 import { GoUpButton } from "@/features";
-import { LandingCard } from "@/shared";
-import SquareLine from "@/shared/ui/components/square-line/SquareLine";
 import { FEATURES_CARDS_LIST } from "./cards";
 import styles from "./Features.module.css";
 
@@ -17,7 +16,7 @@ export default function Features() {
                             iconBackgroundColor={iconBackgroundColor}
                             label={label}
                             text={text}
-                            icon={icon}
+                            iconSrc={icon}
                             key={label}
                         />
                     ),

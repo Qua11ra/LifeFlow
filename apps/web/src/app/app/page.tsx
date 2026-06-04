@@ -1,4 +1,5 @@
-import { Breadcrumbs, type ILink } from "@/shared";
+import { Breadcrumbs } from "@repo/ui";
+import type { ILink } from "@/shared";
 import { Dashboard } from "@/widgets";
 import styles from "./page.module.css";
 

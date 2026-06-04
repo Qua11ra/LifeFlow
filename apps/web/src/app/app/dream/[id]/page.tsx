@@ -1,5 +1,6 @@
+import { Breadcrumbs } from "@repo/ui";
 import { BigDreamCard } from "@/entities";
-import { Breadcrumbs, type ILink } from "@/shared";
+import type { ILink } from "@/shared";
 import styles from "./page.module.css";
 
 const TEST_DREAM_CARD = {

@@ -1,4 +1,4 @@
-import { HomeIcon, PersonIcon, PlusIcon } from "@/shared";
+import { HomeIcon, PersonIcon, PlusIcon } from "@repo/ui";
 import type { ISidebarButton } from "./types";
 
 export const SIDEBAR_BUTTONS: ISidebarButton[] = [

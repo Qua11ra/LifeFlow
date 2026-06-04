@@ -1,11 +1,11 @@
 import type { Metadata } from "next";
 import { cookies } from "next/headers";
 import type { ReactNode } from "react";
-import "@/shared/ui/styles/reset.css";
-import "@/shared/ui/styles/fonts.css";
-import "@/shared/ui/styles/variables.css";
-import "@/shared/ui/styles/themes.css";
-import "@/shared/ui/styles/global.css";
+import "@/shared/styles/reset.css";
+import "@/shared/styles/fonts.css";
+import "@/shared/styles/variables.css";
+import "@/shared/styles/themes.css";
+import "@/shared/styles/global.css";
 
 export const metadata: Metadata = {
     title: "LifeFlow",

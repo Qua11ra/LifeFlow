@@ -1,7 +1,8 @@
 "use client";
+import { FILL_ICON_COLOR, KidStarIcon } from "@repo/ui";
 import { useRouter } from "next/navigation";
 import { useState } from "react";
-import { ACTIVE_STAR_COLOR, FILL_ICON_COLOR, KidStarIcon } from "@/shared";
+import { ACTIVE_STAR_COLOR } from "@/shared";
 import styles from "./DreamCard.module.css";
 import type { IDreamCardVisualProps } from "./DreamCardView";
 import DreamCardView from "./DreamCardView";

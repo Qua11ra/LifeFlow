@@ -1,10 +1,10 @@
-'use client'
-import { AuthForm, Input, Button } from "@/shared";
+"use client";
+import { AuthForm, Button, Input } from "@repo/ui";
 import Link from "next/link";
 import { useFormStatus } from "react-dom";
 
 export default function LoginPage() {
-    const {pending} = useFormStatus();
+    const { pending } = useFormStatus();
 
     function handleSubmit(e: React.SubmitEvent<HTMLFormElement>) {
         e.preventDefault();

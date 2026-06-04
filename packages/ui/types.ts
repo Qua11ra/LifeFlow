@@ -1,0 +1,20 @@
+import type { ReactNode } from "react";
+
+export type Option = {
+    value: string;
+    label: string;
+};
+
+export interface IChildrenProps {
+    children: ReactNode;
+}
+
+export interface IIconProps {
+    fill?: string;
+    size?: number;
+}
+
+export interface ILink {
+    label: string;
+    to: string;
+}

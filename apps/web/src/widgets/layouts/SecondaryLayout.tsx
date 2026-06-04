@@ -1,7 +1,7 @@
 "use client";
+import { LifeFlowLogo } from "@repo/ui";
 import { SwitchThemeIcon } from "@/features";
 import { useScrollY } from "@/shared";
-import LifeFlowLogo from "@/shared/ui/components/lifeflow-logo/LifeFlowLogo";
 import NavList from "./components/nav-list/NavList";
 import styles from "./SecondaryLayout.module.css";
 
@@ -14,7 +14,10 @@ export default function SecondaryLayout() {
             className={`${styles.hero_header} ${isAtTop ? styles.at_top : ""}`}
         >
             <div className={styles.collapsed}>
-                <LifeFlowLogo />
+                <LifeFlowLogo
+                    src="/icons/LifeFlow-full_logo.png"
+                    alt="LifeFlow"
+                />
                 <NavList />
                 <SwitchThemeIcon />
             </div>

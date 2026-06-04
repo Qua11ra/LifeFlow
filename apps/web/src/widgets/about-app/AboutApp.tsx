@@ -1,6 +1,6 @@
+import { SquareLine } from "@repo/ui";
 import { BigDreamCard } from "@/entities";
 import { GoUpButton } from "@/features";
-import SquareLine from "@/shared/ui/components/square-line/SquareLine";
 import styles from "./AboutApp.module.css";
 
 const LANDING_DREAM_CARD_PROPS = {

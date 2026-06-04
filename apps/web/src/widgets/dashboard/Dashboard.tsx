@@ -1,5 +1,5 @@
+import { Input, SearchIcon, Select } from "@repo/ui";
 import { DreamCard } from "@/entities";
-import { Input, SearchIcon, Select } from "@/shared";
 import { CATEGORIES } from "./const";
 import styles from "./Dashboard.module.css";
 

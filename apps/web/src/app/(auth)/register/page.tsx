@@ -1,8 +1,8 @@
-'use client';
-import { AuthForm, Input, Button } from "@/shared";
+"use client";
+import { AuthForm, Button, Input } from "@repo/ui";
 import Link from "next/link";
-import { useState, useRef } from "react";
-import styles from "./page.module.css"
+import { useRef, useState } from "react";
+import styles from "./page.module.css";
 
 export default function RegisterPage() {
     const [step, setStep] = useState(1);
@@ -11,7 +11,6 @@ export default function RegisterPage() {
     function handleSubmit(e: React.SubmitEvent<HTMLFormElement>) {
         e.preventDefault();
     }
-
 
     function handleNext() {
         setStep(2);
