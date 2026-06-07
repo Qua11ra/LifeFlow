@@ -3,19 +3,18 @@ import { useState } from "react";
 
 type theme = "light" | "dark";
 
+function init() {
+    if (typeof document !== "undefined") {
+        return (
+            (document.documentElement.getAttribute(
+                "data-theme",
+            ) as theme) || "light"
+        );
+    }
+    return "light";
+}
 export default function useTheme() {
     const [selectedTheme, setSelectedTheme] = useState<theme>(init());
-
-    function init() {
-        if (typeof document !== "undefined") {
-            return (
-                (document.documentElement.getAttribute(
-                    "data-theme",
-                ) as theme) || "light"
-            );
-        }
-        return "light";
-    }
 
     function switchTheme() {
         const newTheme: theme = selectedTheme === "dark" ? "light" : "dark";

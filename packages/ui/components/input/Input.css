@@ -1,4 +1,4 @@
-.background {
+.input__background {
     display: flex;
     align-items: center;
     gap: 0.5rem;
@@ -7,12 +7,12 @@
     border: var(--border);
     background-color: var(--color-white);
 
-    & > .button {
+    & > .input__button {
         background: none;
         border: none;
     }
 
-    & > .input {
+    & > .input__input {
         border: none;
         flex-grow: 1;
         font-size: var(--font-p-size);

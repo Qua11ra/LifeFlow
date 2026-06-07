@@ -1,5 +1,5 @@
-import { FILL_ICON_COLOR } from "../../consts";
-import type { IIconProps } from "../../types";
+import { FILL_ICON_COLOR } from "@/consts";
+import type { IIconProps } from "@/types";
 
 export default function PlusIcon({
     fill = FILL_ICON_COLOR,

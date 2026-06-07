@@ -58,7 +58,7 @@ export default function Footer() {
                     ))}
                 </div>
             </div>
-            <p>© 2026 LiteFlow. All rights reserved.</p>
+            <p>© 2026 LifeFlow. All rights reserved.</p>
         </footer>
     );
 }

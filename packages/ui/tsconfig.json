@@ -9,7 +9,11 @@
         "sourceMap": true,
         "outDir": "./dist",
         "rootDir": ".",
-        "allowImportingTsExtensions": true
+        "allowImportingTsExtensions": true,
+        "baseUrl": ".",
+        "paths": {
+            "@/*": ["./*"],
+        }
     },
     "include": ["*.ts", "*.tsx", "components/**/*.ts", "components/**/*.tsx", "*.d.ts"],
     "exclude": ["node_modules", "dist"]

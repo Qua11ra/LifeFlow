@@ -1,5 +1,5 @@
 import type { FormEventHandler, ReactNode } from "react";
-import styles from "./AuthForm.module.css";
+import "./AuthForm.css";
 
 interface IAuthFormProps {
     title: string;
@@ -18,13 +18,12 @@ export default function AuthForm({
 }: IAuthFormProps) {
     return (
         <form
-            action={() => console.log("AAAAAAAAAAA")}
             onSubmit={onSubmit}
-            className={styles.card}
+            className="authForm__card"
         >
-            <h2 className={styles.title}>{title}</h2>
-            <div className={styles.fields}>{children}</div>
-            <div className={styles.bottom}>{bottomLink}</div>
+            <h2 className="authForm__title">{title}</h2>
+            <div className="authForm__fields">{children}</div>
+            <div className="authForm__bottom">{bottomLink}</div>
             {themeSwitcher}
         </form>
     );

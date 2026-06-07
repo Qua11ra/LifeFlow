@@ -6,6 +6,7 @@ import "@/shared/styles/fonts.css";
 import "@/shared/styles/variables.css";
 import "@/shared/styles/themes.css";
 import "@/shared/styles/global.css";
+import "@repo/ui/style.css";
 
 export const metadata: Metadata = {
     title: "LifeFlow",

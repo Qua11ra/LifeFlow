@@ -1,9 +1,9 @@
-import styles from "./LandingCards.module.css";
-
+import "./LandingCards.css";
+import { type IStaticImageData } from "@/types";
 interface ICardProps {
     label: string;
     text: string;
-    iconSrc: string | undefined;
+    icon: IStaticImageData | undefined;
     iconBackgroundColor: string;
 }
 
@@ -12,19 +12,19 @@ const CARD_LOGO_WIDTH = 45,
 
 export default function LandingCard({
     label,
-    iconSrc,
+    icon,
     text,
     iconBackgroundColor,
 }: ICardProps) {
     return (
-        <div className={`${styles.card}`}>
+        <div className="landingCard__card">
             <div
-                className={styles.icon_background}
+                className="landingCard__iconBackground"
                 style={{ backgroundColor: iconBackgroundColor }}
             >
-                {iconSrc && (
+                {icon && (
                     <img
-                        src={iconSrc}
+                        src={icon.src}
                         alt={label}
                         width={CARD_LOGO_WIDTH}
                         height={CARD_LOGO_HEIGHT}

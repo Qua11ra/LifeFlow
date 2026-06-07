@@ -1,9 +1,9 @@
-.square_line {
+.squareLine {
     display: flex;
     align-items: center;
     gap: 0.5rem;
 
-    & > .left {
+    & > .squareLine__left {
         background-color: var(--color-thirty);
         width: 5rem;
         height: 3px;
@@ -13,14 +13,14 @@
         border-bottom-right-radius: 10%;
     }
 
-    & > .center {
+    & > .squareLine__center {
         width: 15px;
         height: 15px;
         background-color: var(--color-thirty);
         flex-shrink: 0;
     }
 
-    & > .right {
+    & > .squareLine__right {
         background-color: var(--color-thirty);
         width: 5rem;
         height: 3px;

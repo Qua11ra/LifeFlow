@@ -1,5 +1,5 @@
 import { SquareLine } from "@repo/ui";
-import { GoToUpButton } from "@/features";
+import { GoToAppButton } from "@/features";
 import HowItWorksStep from "./components/HowItWorksStep";
 import styles from "./HowItWorks.module.css";
 import { HOW_IT_WORKS_STEPS } from "./steps";
@@ -27,7 +27,7 @@ export default function HowItWorks() {
                     Join thousands people, who already converting their dreams
                     to reality with LifeFlow.
                 </p>
-                <GoToUpButton />
+                <GoToAppButton />
             </div>
         </section>
     );

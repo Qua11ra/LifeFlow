@@ -1,6 +1,4 @@
-import { Breadcrumbs } from "@repo/ui";
 import { BigDreamCard } from "@/entities";
-import type { ILink } from "@/shared";
 import styles from "./page.module.css";
 
 const TEST_DREAM_CARD = {
@@ -14,15 +12,9 @@ const TEST_DREAM_CARD = {
 };
 //TODO delete mock
 
-const LINKS: ILink[] = [
-    { label: "My dream", to: "/app" },
-    { label: TEST_DREAM_CARD.label, to: "" },
-];
-
 export default function DreamPage() {
     return (
         <>
-            <Breadcrumbs links={LINKS} />
             <BigDreamCard {...TEST_DREAM_CARD} />
             <h3 className={styles.title}>Stages on the way to your dream</h3>
         </>

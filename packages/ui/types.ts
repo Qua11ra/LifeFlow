@@ -18,3 +18,7 @@ export interface ILink {
     label: string;
     to: string;
 }
+
+export interface IStaticImageData {
+    src: string;
+}

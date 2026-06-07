@@ -1,5 +1,5 @@
 import type { ReactNode } from "react";
-import styles from "./ErrorFallback.module.css";
+import "./ErrorFallback.css";
 
 interface ErrorFallbackProps {
     title: string;
@@ -21,11 +21,11 @@ export default function ErrorFallback({
     refreshLabel = "Refresh page",
 }: ErrorFallbackProps) {
     return (
-        <main className={styles.not_found_section}>
+        <main className="errorFallback__section">
             {logo}
-            <section className={styles.info}>
+            <section className="errorFallback__info">
                 <h1>{title}</h1>
-                <div className={styles.buttons}>
+                <div className="errorFallback__buttons">
                     {onGoBack && (
                         <button type="button" onClick={onGoBack}>
                             {goBackLabel}

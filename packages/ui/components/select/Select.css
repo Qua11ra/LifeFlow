@@ -1,4 +1,4 @@
-.select {
+.select__select {
     background: none;
     cursor: pointer;
     border: var(--border);
@@ -8,7 +8,7 @@
 
     font-size: var(--font-p-size);
 
-    & > .option {
+    & > .select__option {
         cursor: pointer;
     }
 }

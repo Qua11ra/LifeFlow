@@ -1,5 +1,5 @@
 import type { InputHTMLAttributes, ReactNode } from "react";
-import styles from "./Input.module.css";
+import "./Input.css";
 
 interface IInputProps extends InputHTMLAttributes<HTMLInputElement> {
     icon?: ReactNode;
@@ -8,13 +8,13 @@ interface IInputProps extends InputHTMLAttributes<HTMLInputElement> {
 
 export default function Input({ icon, fn, ...props }: IInputProps) {
     return (
-        <div className={styles.background}>
+        <div className="input__background">
             {icon && (
-                <button onClick={fn} className={styles.button}>
+                <button onClick={fn} className="input__button">
                     {icon}
                 </button>
             )}
-            <input type="text" className={styles.input} {...props} />
+            <input type="text" className="input__input" {...props} />
         </div>
     );
 }

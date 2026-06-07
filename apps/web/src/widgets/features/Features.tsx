@@ -16,7 +16,7 @@ export default function Features() {
                             iconBackgroundColor={iconBackgroundColor}
                             label={label}
                             text={text}
-                            iconSrc={icon}
+                            icon={icon}
                             key={label}
                         />
                     ),

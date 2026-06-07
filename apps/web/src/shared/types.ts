@@ -1,3 +1,4 @@
+import { StaticImageData } from "next/image";
 import type { ReactNode } from "react";
 
 export type Option = {
@@ -10,15 +11,10 @@ export interface IChildrenProps {
 }
 
 export interface ICard {
-    icon?: string;
+    icon?: StaticImageData;
     iconBackgroundColor: string;
     label: string;
     text: string;
-}
-
-export interface IIconProps {
-    fill?: string;
-    size?: number;
 }
 
 export interface ILink {

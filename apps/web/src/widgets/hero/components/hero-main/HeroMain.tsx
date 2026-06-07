@@ -1,4 +1,4 @@
-import { GoToUpButton } from "@/features";
+import { GoToAppButton } from "@/features";
 import styles from "./Heromain.module.css";
 
 export default function HeroMain() {
@@ -10,7 +10,7 @@ export default function HeroMain() {
                 Step every day and complete the imposible
             </p>
             {/*//TODO write a normal description like maket*/}
-            <GoToUpButton />
+            <GoToAppButton />
         </div>
     );
 }

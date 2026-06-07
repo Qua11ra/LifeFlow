@@ -1,11 +1,11 @@
-import styles from "./SquareLine.module.css";
+import "./SquareLine.css";
 
 export default function SquareLine() {
     return (
-        <div className={styles.square_line}>
-            <div className={styles.left}></div>
-            <div className={styles.center}></div>
-            <div className={styles.right}></div>
+        <div className="squareLine">
+            <div className="squareLine__left"></div>
+            <div className="squareLine__center"></div>
+            <div className="squareLine__right"></div>
         </div>
     );
 }

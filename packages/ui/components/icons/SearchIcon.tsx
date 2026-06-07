@@ -1,4 +1,4 @@
-import type { IIconProps } from "../../types";
+import type { IIconProps } from "@/types";
 
 export default function SearchIcon({
     fill = "#666666",

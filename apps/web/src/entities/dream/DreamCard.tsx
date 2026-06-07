@@ -22,7 +22,7 @@ export default function DreamCard({
     const FILL_COLOR = isActiveFavorite ? ACTIVE_STAR_COLOR : FILL_ICON_COLOR;
 
     function handleClick() {
-        router.push(`app/dream/${id}`);
+        router.push(`/app/dream/${id}`);
     }
 
     function handleSwitchFavorite(
@@ -40,7 +40,7 @@ export default function DreamCard({
             children={
                 <button
                     onClick={handleSwitchFavorite}
-                    className={`${styles.favorite_button} ${isActiveFavorite && styles.active}`}
+                    className={`${styles.favorite_button} ${isActiveFavorite ? styles.active : ""}`}
                 >
                     <KidStarIcon fill={FILL_COLOR} />
                 </button>
