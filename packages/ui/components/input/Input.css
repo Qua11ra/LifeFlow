@@ -21,4 +21,13 @@
             outline: none;
         }
     }
+
+    &.error {
+        border: var(--border-error);
+    }
+
+    & > .error {
+        color: var(--color-error);
+        font-size: var(--font-p-size);
+    }
 }

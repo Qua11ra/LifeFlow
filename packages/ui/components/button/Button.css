@@ -54,7 +54,7 @@
 .outline {
     background: none;
     border: var(--border);
-    color: var(--color-text-primary);
+    color: var(--color-text-in-background);
 }
 
 .outline:hover {

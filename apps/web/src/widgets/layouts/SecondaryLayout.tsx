@@ -1,6 +1,6 @@
 "use client";
 import { LifeFlowLogo } from "@repo/ui";
-import { SwitchThemeIcon } from "@/features";
+import { SwitchThemeButton } from "@/features";
 import { useScrollY } from "@/shared";
 import NavList from "./components/nav-list/NavList";
 import styles from "./SecondaryLayout.module.css";
@@ -19,7 +19,7 @@ export default function SecondaryLayout() {
                     alt="LifeFlow"
                 />
                 <NavList />
-                <SwitchThemeIcon />
+                <SwitchThemeButton />
             </div>
         </header>
     );

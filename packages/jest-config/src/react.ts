@@ -1,8 +1,8 @@
-const base = require("./base");
+import type { Config } from "jest";
+import baseConfig from "./base";
 
-/** @type {import('ts-jest').JestConfigWithTsJest} */
-module.exports = {
-    ...base,
+const reactConfig: Config = {
+    ...baseConfig,
     testEnvironment: "jsdom",
     moduleNameMapper: {
         "\\.module\\.css$": "identity-obj-proxy",
@@ -10,3 +10,5 @@ module.exports = {
         "^@/(.*)$": "<rootDir>/src/$1",
     },
 };
+
+export default reactConfig;

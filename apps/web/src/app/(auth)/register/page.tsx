@@ -1,75 +1,75 @@
 "use client";
 import { AuthForm, Button, Input } from "@repo/ui";
 import Link from "next/link";
-import { useRef, useState } from "react";
+import { useState } from "react";
 import styles from "./page.module.css";
+import { REGISTRATION_FIELDS } from "@/features/auth/consts";
+import { SwitchThemeButton } from "@/features";
 
 export default function RegisterPage() {
+    const TOTAL_STEPS = Object.entries(REGISTRATION_FIELDS).length;
     const [step, setStep] = useState(1);
-    const fileRef = useRef<HTMLInputElement>(null);
 
     function handleSubmit(e: React.SubmitEvent<HTMLFormElement>) {
         e.preventDefault();
+
+        setStep(TOTAL_STEPS)
     }
 
     function handleNext() {
-        setStep(2);
+        if (step >= TOTAL_STEPS) return;
+
+        setStep((prev) => prev + 1);
     }
 
     function handleBack() {
-        setStep(1);
-    }
+        if (step < 2) return;
 
-    if (step === 1) {
-        return (
-            <AuthForm
-                title="Registration"
-                onSubmit={handleSubmit}
-                bottomLink={
-                    <p>
-                        Already have an account?{" "}
-                        <Link href="/login">Login</Link>
-                    </p>
-                }
-            >
-                <Input placeholder="Name" />
-                <Input placeholder="Email" type="email" />
-                <Input placeholder="Password" type="password" />
-                <Input placeholder="Confirm password" type="password" />
-                <Button type="button" size="medium" onClick={handleNext}>
-                    Next
-                </Button>
-            </AuthForm>
-        );
+        setStep((prev) => prev - 1);
     }
 
     return (
         <AuthForm
+            step={step}
+            stepsCount={TOTAL_STEPS}
             title="Registration"
             onSubmit={handleSubmit}
             bottomLink={
-                <p>
-                    Already have an account? <Link href="/login">Login</Link>
-                </p>
+                <>
+                    <SwitchThemeButton />
+                    <p>
+                        Already have an account?{" "}
+                        <Link href="/login">Login</Link>
+                    </p>
+                </>
             }
         >
-            <div className={styles.avatar}>
-                <label htmlFor="avatar">Avatar (optional)</label>
-                <input
-                    ref={fileRef}
-                    id="avatar"
-                    type="file"
-                    accept="image/*"
-                    className={styles.fileInput}
+            {REGISTRATION_FIELDS[step]!.map(({ type, placeholder, value }) => (
+                <Input
+                    key={placeholder}
+                    type={type}
+                    placeholder={placeholder}
+                    value={value}
                 />
-            </div>
+            ))}
             <div className={styles.buttons}>
                 <Button type="button" variant="outline" onClick={handleBack}>
                     Back
                 </Button>
-                <Button type="submit" size="medium">
-                    Create account
-                </Button>
+
+                {step === TOTAL_STEPS ? (
+                    <Button type="submit" size="medium">
+                        Create account
+                    </Button>
+                ) : (
+                    <Button
+                        type="button"
+                        disabled={step >= TOTAL_STEPS}
+                        onClick={handleNext}
+                    >
+                        Next
+                    </Button>
+                )}
             </div>
         </AuthForm>
     );

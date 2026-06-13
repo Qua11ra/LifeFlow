@@ -1,7 +1,7 @@
 "use client";
 import { ErrorFallback, LifeFlowLogo } from "@repo/ui";
 import { useRouter } from "next/navigation";
-import { SwitchThemeIcon } from "@/features";
+import { SwitchThemeButton } from "@/features";
 
 export default function NotFound() {
     const router = useRouter();
@@ -18,7 +18,7 @@ export default function NotFound() {
                     height={80}
                 />
             }
-            themeSwitcher={<SwitchThemeIcon />}
+            themeSwitcher={<SwitchThemeButton />}
         />
     );
 }

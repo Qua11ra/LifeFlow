@@ -1,8 +1,8 @@
-import reactConfig from "@repo/jest-config/react";
+import nativeConfig from "@repo/jest-config/native";
 import type { Config } from "jest";
 
 const config: Config = {
-    ...reactConfig,
+    ...nativeConfig,
     rootDir: "src",
 };
 

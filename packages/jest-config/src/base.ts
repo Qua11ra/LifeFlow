@@ -1,5 +1,6 @@
-/** @type {import('ts-jest').JestConfigWithTsJest} */
-module.exports = {
+import type { Config } from "jest";
+
+const baseConfig: Config = {
     testEnvironment: "node",
     transform: {
         "^.+\\.(t|j)sx?$": "ts-jest",
@@ -9,3 +10,5 @@ module.exports = {
     coverageDirectory: "./coverage",
     testPathIgnorePatterns: ["/node_modules/", "/dist/"],
 };
+
+export default baseConfig;

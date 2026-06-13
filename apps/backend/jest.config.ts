@@ -1,6 +1,8 @@
+import base from "@repo/jest-config/base"
 import type { Config } from "jest";
 
 const config: Config = {
+    ...base,
     projects: [
         {
             displayName: "unit",

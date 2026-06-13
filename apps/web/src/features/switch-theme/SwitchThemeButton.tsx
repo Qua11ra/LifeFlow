@@ -1,8 +1,8 @@
 "use client";
-import styles from "./SwitchThemeIcon.module.css";
+import styles from "./SwitchThemeButton.module.css";
 import useTheme from "./useTheme";
 
-export default function SwitchThemeIcon() {
+export default function SwitchThemeButton() {
     const { switchTheme } = useTheme();
 
     return (
