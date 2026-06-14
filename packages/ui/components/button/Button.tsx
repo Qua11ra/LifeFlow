@@ -6,7 +6,6 @@ interface IButtonProps extends ButtonHTMLAttributes<HTMLButtonElement> {
     children: ReactNode;
     variant?: "primary" | "secondary" | "outline";
     size?: "small" | "medium" | "large";
-    onClick?: () => void;
 }
 
 export default function Button({

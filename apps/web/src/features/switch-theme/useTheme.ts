@@ -6,9 +6,8 @@ type theme = "light" | "dark";
 function init() {
     if (typeof document !== "undefined") {
         return (
-            (document.documentElement.getAttribute(
-                "data-theme",
-            ) as theme) || "light"
+            (document.documentElement.getAttribute("data-theme") as theme) ||
+            "light"
         );
     }
     return "light";

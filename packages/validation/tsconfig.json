@@ -1,13 +1,4 @@
 {
     "extends": "@repo/typescript-config/base.json",
-    "compilerOptions": {
-        "outDir": "./dist",
-        "rootDir": ".",
-        "baseUrl": ".",
-        "paths": {
-            "@/*": ["./*"],
-        }
-    },
-    "include": ["*.ts", "*.tsx", "components/**/*.ts", "components/**/*.tsx", "*.d.ts"],
-    "exclude": ["node_modules", "dist"]
+    "exclude": ["**/*.test.ts", "**/*.test.tsx", "**/test/**"]
 }

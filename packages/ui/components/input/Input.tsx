@@ -9,13 +9,15 @@ interface IInputProps extends InputHTMLAttributes<HTMLInputElement> {
 
 export default function Input({ icon, fn, error, ...props }: IInputProps) {
     return (
-        <div className={`input__background ${error ? "error" : ""}`}>
-            {icon && (
-                <button onClick={fn} className="input__button">
-                    {icon}
-                </button>
-            )}
-            <input type="text" className="input__input" {...props} />
+        <div className={`wrapper${error ? " error" : ""}`}>
+            <div className={`input__background ${error ? "error" : ""}`}>
+                {icon && (
+                    <button onClick={fn} className="input__button">
+                        {icon}
+                    </button>
+                )}
+                <input className="input__input" {...props} />
+            </div>
             {error && <p className="error">{error}</p>}
         </div>
     );

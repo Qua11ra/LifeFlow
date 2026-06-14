@@ -1,9 +1,9 @@
-import { z } from "zod";
+import { ZodObject, z } from "zod";
 
 const PASSWORD_SCHEMA =
     /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{8,}$/;
 
-const LoginSchema = z.object({
+const Login1StepSchema = z.object({
     email: z.email("Invalid email"),
     password: z
         .string()
@@ -15,7 +15,7 @@ const LoginSchema = z.object({
         ),
 });
 
-const RegistrationSchema = z
+const Registration1StepSchema = z
     .object({
         name: z.string().trim().min(3, "Name must be at least 3 characters"),
         email: z.email("Invalid email"),
@@ -31,23 +31,41 @@ const RegistrationSchema = z
             .string()
             .trim()
             .min(8, "Password must be at least 8 characters"),
-        avatar: z
-            .file()
-            .max(5 * 1024 * 1024, "File size too large")
-            .mime(["image/jpeg", "image/png"], "Invalid file type")
-            .optional(),
     })
     .refine((data) => data.password === data.confirmPassword, {
         error: "Passwords do not match",
         path: ["confirmPassword"],
     });
 
-type LoginSchemaType = z.infer<typeof LoginSchema>;
-type RegistrationSchemaType = z.infer<typeof RegistrationSchema>;
+const Registration2StepSchema = z.object({
+    avatar: z
+        .file()
+        .max(5 * 1024 * 1024, "File size too large")
+        .mime(["image/jpeg", "image/png"], "Invalid file type")
+        .optional(),
+});
 
-export {
-    LoginSchema,
-    RegistrationSchema,
-    type LoginSchemaType,
-    type RegistrationSchemaType,
+interface LoginDataTypeMap {
+    1: z.infer<typeof Login1StepSchema>;
+}
+
+interface RegistrationDataTypeMap {
+    1: z.infer<typeof Registration1StepSchema>;
+    2: z.infer<typeof Registration2StepSchema>;
+}
+
+export const LoginSchema: {
+    [K in keyof LoginDataTypeMap]: ZodObject
+} = {
+    1: Login1StepSchema
 };
+
+export const RegistrationSchema: {
+    [K in keyof RegistrationDataTypeMap]: ZodObject
+} = {
+    1: Registration1StepSchema,
+    2: Registration2StepSchema,
+};
+
+export type LoginSchemaType = LoginDataTypeMap;
+export type RegistrationSchemaType = RegistrationDataTypeMap;

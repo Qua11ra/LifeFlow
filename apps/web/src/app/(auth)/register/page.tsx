@@ -5,19 +5,28 @@ import { useState } from "react";
 import styles from "./page.module.css";
 import { REGISTRATION_FIELDS } from "@/features/auth/consts";
 import { SwitchThemeButton } from "@/features";
+import useAuth from "@/shared/hooks/useAuth";
 
 export default function RegisterPage() {
     const TOTAL_STEPS = Object.entries(REGISTRATION_FIELDS).length;
     const [step, setStep] = useState(1);
+    const { errors, registration } = useAuth();
 
     function handleSubmit(e: React.SubmitEvent<HTMLFormElement>) {
         e.preventDefault();
 
-        setStep(TOTAL_STEPS)
+        setStep(TOTAL_STEPS);
     }
 
-    function handleNext() {
+    function handleNext(e: React.MouseEvent<HTMLButtonElement>) {
         if (step >= TOTAL_STEPS) return;
+
+        console.log(e.currentTarget);
+
+        const formData = new FormData();
+        const data = Object.fromEntries(formData);
+
+        registration(data, step);
 
         setStep((prev) => prev + 1);
     }
@@ -44,12 +53,12 @@ export default function RegisterPage() {
                 </>
             }
         >
-            {REGISTRATION_FIELDS[step]!.map(({ type, placeholder, value }) => (
+            {REGISTRATION_FIELDS[step]!.map(({ type, placeholder, name }) => (
                 <Input
-                    key={placeholder}
+                    key={name}
                     type={type}
                     placeholder={placeholder}
-                    value={value}
+                    error={errors?.[name]}
                 />
             ))}
             <div className={styles.buttons}>

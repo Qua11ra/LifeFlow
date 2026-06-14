@@ -1,7 +1,7 @@
 export type InputField = {
-    type: "text" |"email" | "password" | "file",
-    placeholder: string,
-    validateFn: (...args: string[]) => boolean;
-}
+    name: string;
+    type: "text" | "email" | "password" | "file";
+    placeholder: string;
+};
 
-export type IAuthFields = Record<string, InputField[]>
+export type IAuthFields = Record<string, InputField[]>;

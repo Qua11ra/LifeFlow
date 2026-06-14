@@ -1,22 +1,34 @@
 "use client";
 import { SwitchThemeButton } from "@/features";
 import { LOGIN_FIELDS } from "@/features/auth/consts";
+import useAuth from "@/shared/hooks/useAuth";
 import { AuthForm, Button, Input } from "@repo/ui";
 import Link from "next/link";
-import { useFormStatus } from "react-dom";
+import { useState } from "react";
 
 export default function LoginPage() {
-    const { pending } = useFormStatus();
+    const TOTAL_STEPS = LOGIN_FIELDS.length;
+    const [step, _] = useState(1);
+    const { login, errors } = useAuth();
+    
 
-    function handleSubmit(e: React.SubmitEvent<HTMLFormElement>) {
+    async function handleSubmit(e: React.SubmitEvent<HTMLFormElement>) {
         e.preventDefault();
+        
+        const formData = new FormData(e.currentTarget)
+        const data = Object.fromEntries(formData);
+        
+        const result = await login(data, step);
+        console.log(errors)
+        if (!result) return;
     }
+
     return (
         <AuthForm
             title="Login"
             onSubmit={handleSubmit}
-            step={1}
-            stepsCount={1}
+            step={step}
+            stepsCount={TOTAL_STEPS}
             bottomLink={
                 <>
                     <SwitchThemeButton />
@@ -27,16 +39,16 @@ export default function LoginPage() {
                 </>
             }
         >
-            {LOGIN_FIELDS.map(({ type, placeholder, value }) => (
+            {LOGIN_FIELDS.map(({ type, placeholder, name }) => (
                 <Input
-                    error={"error"}
-                    key={placeholder}
+                    error={errors?.[name]}
+                    key={name}
                     type={type}
+                    name={name}
                     placeholder={placeholder}
-                    value={value}
                 />
             ))}
-            <Button type="submit" size="medium" disabled={pending}>
+            <Button type="submit" size="medium">
                 Login
             </Button>
         </AuthForm>

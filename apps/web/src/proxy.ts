@@ -6,7 +6,7 @@ export default async function proxy(request: NextRequest) {
     if (!accessToken) {
         return NextResponse.redirect(new URL("/login", request.url));
     }
-    
+
     return NextResponse.next();
 }
 

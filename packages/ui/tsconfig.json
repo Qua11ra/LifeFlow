@@ -1,18 +1,11 @@
 {
-    "extends": "@repo/typescript-config/react-library.json",
+    "extends": "@repo/typescript-config/react.json",
     "compilerOptions": {
-        "target": "ES2020",
-        "lib": ["ES2020", "DOM", "DOM.Iterable"],
-        "module": "ESNext",
-        "moduleResolution": "bundler",
-        "noEmit": true,
-        "sourceMap": true,
         "outDir": "./dist",
-        "rootDir": ".",
-        "allowImportingTsExtensions": true,
-        "baseUrl": ".",
+        "ignoreDeprecations": "6.0", //Strange bug in building with dts
+        "baseUrl": "./",
         "paths": {
-            "@/*": ["./*"],
+            "@/*": ["./*"]
         }
     },
     "include": ["*.ts", "*.tsx", "components/**/*.ts", "components/**/*.tsx", "*.d.ts"],

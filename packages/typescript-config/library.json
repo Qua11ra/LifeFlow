@@ -1,0 +1,12 @@
+{
+    "extends": "./base.json",
+    "compilerOptions": {
+        "outDir": "./dist",
+        "noEmit": false,
+        "paths": {
+            "@/*": ["./*"]
+        }
+    },
+    "include": ["*.ts", "*.tsx", "src/**/*.ts", "src/**/*.tsx", "*.d.ts"],
+    "exclude": ["node_modules", "dist"]
+}

@@ -1,6 +1,7 @@
 {
     "extends": "@repo/typescript-config/base.json",
     "compilerOptions": {
+        "ignoreDeprecations": "6.0",
         "lib": ["ES2022"],
         "resolvePackageJsonExports": true,
         "removeComments": true,
@@ -8,6 +9,8 @@
         "experimentalDecorators": true,
         "allowSyntheticDefaultImports": true,
         "outDir": "./dist",
+        "rootDir": ".",
         "baseUrl": "./"
-    }
+    },
+    "include": ["src/**/*.ts", "test/**/*.ts"]
 }

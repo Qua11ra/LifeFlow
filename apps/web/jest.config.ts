@@ -1,9 +1,0 @@
-import reactConfig from "@repo/jest-config/react";
-import type { Config } from "jest";
-
-const config: Config = {
-    ...reactConfig,
-    rootDir: "src",
-};
-
-export default config;

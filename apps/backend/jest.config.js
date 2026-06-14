@@ -1,7 +1,6 @@
-import base from "@repo/jest-config/base"
-import type { Config } from "jest";
+const base = require("@repo/jest-config/base").default;
 
-const config: Config = {
+const config = {
     ...base,
     projects: [
         {
@@ -9,7 +8,7 @@ const config: Config = {
             rootDir: "src",
             testRegex: ".*\\.spec\\.ts$",
             transform: {
-                "^.+\\.(t|j)s$": "ts-jest",
+                "^.+\\.(t|j)s$": ["ts-jest", { tsconfig: "tsconfig.json" }],
             },
             testEnvironment: "node",
             moduleFileExtensions: ["js", "json", "ts"],
@@ -21,7 +20,7 @@ const config: Config = {
             rootDir: "test",
             testRegex: "\\.e2e-spec\\.ts$",
             transform: {
-                "^.+\\.(t|j)s$": "ts-jest",
+                "^.+\\.(t|j)s$": ["ts-jest", { tsconfig: "tsconfig.json" }],
             },
             testEnvironment: "node",
             moduleFileExtensions: ["js", "json", "ts"],
@@ -29,4 +28,4 @@ const config: Config = {
     ],
 };
 
-export default config;
+module.exports = config;
