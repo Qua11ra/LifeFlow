@@ -6,7 +6,11 @@ export default function SwitchThemeButton() {
     const { switchTheme } = useTheme();
 
     return (
-        <button type="button" onClick={switchTheme} className={styles.switch_theme_button}>
+        <button
+            type="button"
+            onClick={switchTheme}
+            className={styles.switch_theme_button}
+        >
             <div className={styles.ball}>
                 <svg
                     xmlns="http://www.w3.org/2000/svg"

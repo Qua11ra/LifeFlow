@@ -5,4 +5,4 @@ import Footer from "./footer/Footer";
 import Hero from "./hero/Hero";
 import HowItWorks from "./how-it-works/HowItWorks";
 
-export { AboutApp, Features, Footer, Hero, HowItWorks, Dashboard };
+export { AboutApp, Dashboard, Features, Footer, Hero, HowItWorks };

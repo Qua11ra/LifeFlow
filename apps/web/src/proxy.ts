@@ -1,4 +1,4 @@
-import { NextRequest, NextResponse } from "next/server";
+import { type NextRequest, NextResponse } from "next/server";
 
 export default async function proxy(request: NextRequest) {
     const accessToken = await request.cookies.get("access_token");

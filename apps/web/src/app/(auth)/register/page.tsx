@@ -1,48 +1,36 @@
 "use client";
-import { AuthForm, Button, Input } from "@repo/ui";
+
+import { AuthForm, Button, FileInput, Input, PasswordInput } from "@repo/ui";
 import Link from "next/link";
-import { useState } from "react";
-import styles from "./page.module.css";
+import { type FormEvent } from "react";
+import { SwitchThemeButton, useRegistrationForm } from "@/features";
 import { REGISTRATION_FIELDS } from "@/features/auth/consts";
-import { SwitchThemeButton } from "@/features";
-import useAuth from "@/shared/hooks/useAuth";
+import type { FieldType } from "@/features/auth/types";
+import styles from "./page.module.css";
+
+const PASSWORD_TYPES: FieldType[] = ["password"];
+const FILE_TYPES: FieldType[] = ["file"];
+const TOTAL_STEPS = REGISTRATION_FIELDS.length;
 
 export default function RegisterPage() {
-    const TOTAL_STEPS = Object.entries(REGISTRATION_FIELDS).length;
-    const [step, setStep] = useState(1);
-    const { errors, registration } = useAuth();
+    const { errors, step, progress, next, back, submit } =
+        useRegistrationForm();
 
-    function handleSubmit(e: React.SubmitEvent<HTMLFormElement>) {
+    function handleSubmit(e: FormEvent<HTMLFormElement>) {
         e.preventDefault();
 
-        setStep(TOTAL_STEPS);
-    }
-
-    function handleNext(e: React.MouseEvent<HTMLButtonElement>) {
-        if (step >= TOTAL_STEPS) return;
-
-        console.log(e.currentTarget);
-
-        const formData = new FormData();
-        const data = Object.fromEntries(formData);
-
-        registration(data, step);
-
-        setStep((prev) => prev + 1);
-    }
-
-    function handleBack() {
-        if (step < 2) return;
-
-        setStep((prev) => prev - 1);
+        if (step < TOTAL_STEPS) {
+            next(new FormData(e.currentTarget));
+        } else {
+            submit(new FormData(e.currentTarget));
+        }
     }
 
     return (
         <AuthForm
-            step={step}
-            stepsCount={TOTAL_STEPS}
             title="Registration"
             onSubmit={handleSubmit}
+            progress={progress}
             bottomLink={
                 <>
                     <SwitchThemeButton />
@@ -53,29 +41,58 @@ export default function RegisterPage() {
                 </>
             }
         >
-            {REGISTRATION_FIELDS[step]!.map(({ type, placeholder, name }) => (
-                <Input
-                    key={name}
-                    type={type}
-                    placeholder={placeholder}
-                    error={errors?.[name]}
-                />
-            ))}
+            {REGISTRATION_FIELDS[step - 1]!.map(
+                ({ name, type, placeholder }) => {
+                    if (PASSWORD_TYPES.includes(type)) {
+                        return (
+                            <PasswordInput
+                                key={name}
+                                name={name}
+                                placeholder={placeholder}
+                                error={errors?.[name]}
+                            />
+                        );
+                    }
+
+                    if (FILE_TYPES.includes(type)) {
+                        return (
+                            <FileInput
+                                key={name}
+                                name={name}
+                                label={placeholder}
+                                error={errors?.[name]}
+                            />
+                        );
+                    }
+
+                    return (
+                        <Input
+                            key={name}
+                            type={type}
+                            name={name}
+                            placeholder={placeholder}
+                            error={errors?.[name]}
+                        />
+                    );
+                },
+            )}
             <div className={styles.buttons}>
-                <Button type="button" variant="outline" onClick={handleBack}>
-                    Back
-                </Button>
+                {step > 1 && (
+                    <Button
+                        type="button"
+                        variant="outline"
+                        onClick={back}
+                    >
+                        Back
+                    </Button>
+                )}
 
                 {step === TOTAL_STEPS ? (
                     <Button type="submit" size="medium">
                         Create account
                     </Button>
                 ) : (
-                    <Button
-                        type="button"
-                        disabled={step >= TOTAL_STEPS}
-                        onClick={handleNext}
-                    >
+                    <Button type="submit">
                         Next
                     </Button>
                 )}

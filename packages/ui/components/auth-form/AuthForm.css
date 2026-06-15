@@ -1,6 +1,7 @@
 .authForm__card {
     width: clamp(40rem, 60vw, 50rem);
-    height: clamp(30rem, 60vh, 50rem);
+    height: fit-content;
+    max-height: 100vh;
     border-radius: var(--radius-md);
     background-color: var(--color-white);
     box-shadow: var(--box-shadow-sm);

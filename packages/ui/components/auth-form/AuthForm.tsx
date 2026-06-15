@@ -1,4 +1,4 @@
-import type { FormEventHandler, ReactNode } from "react";
+import type { FormEventHandler, ReactNode, Ref } from "react";
 import "./AuthForm.css";
 
 interface IAuthFormProps {
@@ -6,8 +6,8 @@ interface IAuthFormProps {
     onSubmit: FormEventHandler<HTMLFormElement>;
     bottomLink: ReactNode;
     children: ReactNode;
-    step: number;
-    stepsCount: number;
+    progress: number;
+    ref?: Ref<HTMLFormElement>;
 }
 
 export default function AuthForm({
@@ -15,20 +15,21 @@ export default function AuthForm({
     children,
     onSubmit,
     bottomLink,
-    step,
-    stepsCount
+    progress,
+    ref
 }: IAuthFormProps) {
-    const FILL_PERCENT = Math.floor(((step - 1) / stepsCount) * 100);
-    
     return (
         <>
-            <form onSubmit={onSubmit} className="authForm__card">
+            <form ref={ref} onSubmit={onSubmit} className="authForm__card">
                 <h2 className="authForm__title">{title}</h2>
                 <div className="authForm__fields">{children}</div>
                 <div className="authForm__bottom">{bottomLink}</div>
             </form>
             <div className="progress_bar">
-                <div className="filled" style={{transform: `translateX(${FILL_PERCENT}%)`}}></div>
+                <div
+                    className="filled"
+                    style={{ transform: `translateX(${progress}%)` }}
+                />
             </div>
         </>
     );

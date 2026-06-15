@@ -1,7 +1,7 @@
 import { ZodObject, z } from "zod";
 
 const PASSWORD_SCHEMA =
-    /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{8,}$/;
+    /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[!@#$%^&*()_+\-=[\]{};':"\\|,.<>/?~`])[A-Za-z\d!@#$%^&*()_+\-=[\]{};':"\\|,.<>/?~`]{8,}$/;
 
 const Login1StepSchema = z.object({
     email: z.email("Invalid email"),
@@ -38,11 +38,17 @@ const Registration1StepSchema = z
     });
 
 const Registration2StepSchema = z.object({
-    avatar: z
-        .file()
-        .max(5 * 1024 * 1024, "File size too large")
-        .mime(["image/jpeg", "image/png"], "Invalid file type")
-        .optional(),
+    avatar: z.preprocess(
+        (val) => {
+            if (val instanceof File && val.size === 0) return undefined;
+            return val;
+        },
+        z
+            .file()
+            .max(5 * 1024 * 1024, "File size too large")
+            .mime(["image/jpeg", "image/png"], "Invalid file type")
+            .optional(),
+    ),
 });
 
 interface LoginDataTypeMap {
@@ -55,13 +61,13 @@ interface RegistrationDataTypeMap {
 }
 
 export const LoginSchema: {
-    [K in keyof LoginDataTypeMap]: ZodObject
+    [K in keyof LoginDataTypeMap]: ZodObject;
 } = {
-    1: Login1StepSchema
+    1: Login1StepSchema,
 };
 
 export const RegistrationSchema: {
-    [K in keyof RegistrationDataTypeMap]: ZodObject
+    [K in keyof RegistrationDataTypeMap]: ZodObject;
 } = {
     1: Registration1StepSchema,
     2: Registration2StepSchema,

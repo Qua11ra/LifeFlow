@@ -1,18 +1,21 @@
-import type { InputHTMLAttributes, ReactNode } from "react";
+import {
+    type InputHTMLAttributes,
+    type ReactNode,
+} from "react";
 import "./Input.css";
 
 interface IInputProps extends InputHTMLAttributes<HTMLInputElement> {
-    error?: string;
+    error?: string | undefined;
     icon?: ReactNode;
-    fn?: () => void;
+    onIconClick?: () => void;
 }
 
-export default function Input({ icon, fn, error, ...props }: IInputProps) {
+export default function Input({ icon, onIconClick, error, ...props }: IInputProps) {
     return (
         <div className={`wrapper${error ? " error" : ""}`}>
             <div className={`input__background ${error ? "error" : ""}`}>
                 {icon && (
-                    <button onClick={fn} className="input__button">
+                    <button onClick={onIconClick} className="input__button" type="button">
                         {icon}
                     </button>
                 )}

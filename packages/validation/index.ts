@@ -1,4 +1,4 @@
-import validate, { type ZodSchemaLayout } from "./src/utils/validate";
+import validate from "./src/utils/validate";
 
 export {
     LoginSchema,
@@ -7,4 +7,4 @@ export {
     type RegistrationSchemaType,
 } from "./src/schemas/auth";
 
-export { validate, ZodSchemaLayout };
+export { validate };

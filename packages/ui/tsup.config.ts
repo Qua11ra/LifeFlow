@@ -20,4 +20,7 @@ export default defineConfig({
             "@/*": "./*",
         };
     },
+    banner: {
+        js: "'use client';",
+    },
 });

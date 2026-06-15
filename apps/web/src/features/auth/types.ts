@@ -1,7 +1,7 @@
-export type InputField = {
+export type FieldType = "text" | "email" | "password" | "file";
+
+export type AuthField = {
     name: string;
-    type: "text" | "email" | "password" | "file";
+    type: FieldType;
     placeholder: string;
 };
-
-export type IAuthFields = Record<string, InputField[]>;
