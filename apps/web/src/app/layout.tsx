@@ -1,11 +1,6 @@
 import type { Metadata } from "next";
 import { cookies } from "next/headers";
 import type { ReactNode } from "react";
-import "@/shared/styles/reset.css";
-import "@/shared/styles/fonts.css";
-import "@/shared/styles/variables.css";
-import "@/shared/styles/themes.css";
-import "@/shared/styles/global.css";
 import "@repo/ui/style.css";
 
 export const metadata: Metadata = {

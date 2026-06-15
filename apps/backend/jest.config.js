@@ -1,4 +1,4 @@
-const base = require("@repo/jest-config/base").default;
+const base = require("@repo/shared-configs/jest/base").default;
 
 const config = {
     ...base,

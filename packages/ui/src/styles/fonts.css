@@ -1,0 +1,93 @@
+/* ELMA_SANS */
+
+@font-face {
+    font-family: "ElmaSans", sans-serif;
+    src: url("./../fonts/elms_sans/woff2/ElmsSans-Regular.woff2")
+        format("woff2");
+    font-style: normal;
+    font-weight: 400;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "ElmaSans", sans-serif;
+    src: url("./../fonts/elms_sans/woff2/ElmsSans-Medium.woff2")
+        format("woff2");
+    font-style: normal;
+    font-weight: 500;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "ElmaSans", sans-serif;
+    src: url("./../fonts/elms_sans/woff2/ElmsSans-SemiBold.woff2")
+        format("woff2");
+    font-style: normal;
+    font-weight: 600;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "ElmaSans", sans-serif;
+    src: url("./../fonts/elms_sans/woff2/ElmsSans-Bold.woff2")
+        format("woff2");
+    font-style: normal;
+    font-weight: 700;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "ElmaSans", sans-serif;
+    src: url("./../fonts/elms_sans/woff2/ElmsSans-ExtraBold.woff2")
+        format("woff2");
+    font-style: normal;
+    font-weight: 800;
+    font-display: swap;
+}
+
+/* GOOGLE_SANS */
+
+@font-face {
+    font-family: "GoogleSansCode", sans-serif;
+    src: url("./../fonts/google_sans/woff2/GoogleSansCode-Regular.woff2")
+        format("woff2");
+    font-style: normal;
+    font-weight: 400;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "GoogleSansCode", sans-serif;
+    src: url("./../fonts/google_sans/woff2/GoogleSansCode-Medium.woff2")
+        format("woff2");
+    font-style: normal;
+    font-weight: 500;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "GoogleSansCode", sans-serif;
+    src: url("./../fonts/google_sans/woff2/GoogleSansCode-SemiBold.woff2")
+        format("woff2");
+    font-style: normal;
+    font-weight: 600;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "GoogleSansCode", sans-serif;
+    src: url("./../fonts/google_sans/woff2/GoogleSansCode-Bold.woff2")
+        format("woff2");
+    font-style: normal;
+    font-weight: 700;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "GoogleSansCode", sans-serif;
+    src: url("./../fonts/google_sans/woff2/GoogleSansCode-ExtraBold.woff2")
+        format("woff2");
+    font-style: normal;
+    font-weight: 800;
+    font-display: swap;
+}

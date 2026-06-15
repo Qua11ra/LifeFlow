@@ -1,4 +1,4 @@
-const reactConfig = require("@repo/jest-config/react").default;
+const reactConfig = require("@repo/shared-configs/jest/react").default;
 
 const config = {
     ...reactConfig,

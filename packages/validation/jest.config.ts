@@ -1,4 +1,4 @@
-import base from "@repo/jest-config/base";
+import base from "@repo/shared-configs/jest/base";
 import type { Config } from "jest";
 
 const config = {

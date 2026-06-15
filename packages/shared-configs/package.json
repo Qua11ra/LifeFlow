@@ -1,0 +1,39 @@
+{
+    "name": "@repo/shared-configs",
+    "version": "0.0.0",
+    "private": true,
+    "type": "module",
+    "scripts": {
+        "build": "tsup"
+    },
+    "exports": {
+        "./jest/base": {
+            "types": "./dist/jest/base.d.ts",
+            "import": "./dist/jest/base.js",
+            "require": "./dist/jest/base.cjs"
+        },
+        "./jest/react": {
+            "types": "./dist/jest/react.d.ts",
+            "import": "./dist/jest/react.js",
+            "require": "./dist/jest/react.cjs"
+        },
+        "./jest/native": {
+            "types": "./dist/jest/native.d.ts",
+            "import": "./dist/jest/native.js",
+            "require": "./dist/jest/native.cjs"
+        },
+        "./playwright": {
+            "types": "./dist/playwright/base.d.ts",
+            "import": "./dist/playwright/base.js",
+            "require": "./dist/playwright/base.cjs"
+        }
+    },
+    "devDependencies": {
+        "@repo/typescript-config": "workspace:^",
+        "@types/node": "^25.9.3",
+        "jest": "^29.7.0",
+        "playwright": "^1.60.0",
+        "ts-jest": "^29.4.11",
+        "tsup": "^8.5.1"
+    }
+}

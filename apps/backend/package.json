@@ -32,7 +32,7 @@
   "devDependencies": {
     "@biomejs/biome": "2.5.0",
     "@nestjs/cli": "^11.0.23",
-    "@repo/jest-config": "workspace:*",
+    "@repo/shared-configs": "workspace:*",
     "@repo/typescript-config": "workspace:*",
     "@nestjs/schematics": "^11.1.0",
     "@nestjs/testing": "^11.1.26",

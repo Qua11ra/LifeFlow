@@ -1,22 +1,23 @@
-import AuthForm from "./components/auth-form/AuthForm";
-import Button from "./components/button/Button";
-import ErrorFallback from "./components/error-fallback/ErrorFallback";
-import Input from "./components/input/Input";
-import PasswordInput from "./components/password-input/PasswordInput";
-import FileInput from "./components/file-input/FileInput";
-import Select from "./components/select/Select";
-import SquareLine from "./components/square-line/SquareLine";
-import LandingCard from "./components/landing-card/LandingCards";
-import LifeFlowLogo from "./components/lifeflow-logo/LifeFlowLogo";
-import SearchIcon from "./components/icons/SearchIcon";
-import PlusIcon from "./components/icons/PlusIcon";
-import PersonIcon from "./components/icons/PersonIcon";
-import HomeIcon from "./components/icons/HomeIcon";
-import KidStarIcon from "./components/icons/KidStar";
-import UploadIcon from "./components/icons/UploadIcon";
+import "./src/styles/index.css";
+import AuthForm from "./src/components/auth-form/AuthForm";
+import Button from "./src/components/button/Button";
+import ErrorFallback from "./src/components/error-fallback/ErrorFallback";
+import Input from "./src/components/input/Input";
+import PasswordInput from "./src/components/password-input/PasswordInput";
+import FileInput from "./src/components/file-input/FileInput";
+import Select from "./src/components/select/Select";
+import SquareLine from "./src/components/square-line/SquareLine";
+import LandingCard from "./src/components/landing-card/LandingCards";
+import LifeFlowLogo from "./src/components/lifeflow-logo/LifeFlowLogo";
+import SearchIcon from "./src/components/icons/SearchIcon";
+import PlusIcon from "./src/components/icons/PlusIcon";
+import PersonIcon from "./src/components/icons/PersonIcon";
+import HomeIcon from "./src/components/icons/HomeIcon";
+import KidStarIcon from "./src/components/icons/KidStar";
+import UploadIcon from "./src/components/icons/UploadIcon";
 
-export type { Option, IChildrenProps, IIconProps, ILink } from "./types";
-export { FILL_ICON_COLOR } from "./consts";
+export type { Option, IChildrenProps, IIconProps, ILink } from "./src/types";
+export { FILL_ICON_COLOR } from "./src/consts";
 export {
     AuthForm,
     Button,

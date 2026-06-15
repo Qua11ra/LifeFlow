@@ -12,15 +12,10 @@ export default defineConfig({
     tsconfig: "./tsconfig.json",
     clean: true,
     external: ["react", "react-dom"],
+    onSuccess: "node scripts/postbuild.mjs",
     esbuildOptions(options) {
-        options.banner = {
-            js: '"use client"',
-        };
         options.alias = {
             "@/*": "./*",
         };
-    },
-    banner: {
-        js: "'use client';",
     },
 });

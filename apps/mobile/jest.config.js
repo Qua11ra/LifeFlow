@@ -1,4 +1,4 @@
-const nativeConfig = require("@repo/jest-config/native").default;
+const nativeConfig = require("@repo/shared-configs/jest/native").default;
 
 const config = {
     ...nativeConfig,

@@ -1,13 +1,8 @@
 {
     "extends": "@repo/typescript-config/react.json",
     "compilerOptions": {
-        "outDir": "./dist",
-        "ignoreDeprecations": "6.0", //Strange bug in building with dts
-        "baseUrl": "./",
-        "paths": {
-            "@/*": ["./*"]
-        }
+        "outDir": "./dist"
     },
-    "include": ["*.ts", "*.tsx", "components/**/*.ts", "components/**/*.tsx", "*.d.ts"],
+    "include": ["*.ts", "*.tsx", "src/components/**/*.ts", "src/components/**/*.tsx", "*.d.ts", "src/consts.ts", "src/types.ts"],
     "exclude": ["node_modules", "dist"]
 }

@@ -9,7 +9,8 @@
         "lint": "biome check",
         "format": "biome format --write",
         "test": "jest --passWithNoTests",
-        "check-types": "tsc --noEmit"
+        "check-types": "tsc --noEmit",
+        "e2e": "playwright test"
     },
     "dependencies": {
         "@repo/ui": "workspace:*",
@@ -24,7 +25,7 @@
     },
     "devDependencies": {
         "@biomejs/biome": "2.5.0",
-        "@repo/jest-config": "workspace:^",
+        "@repo/shared-configs": "workspace:^",
         "@repo/typescript-config": "workspace:^",
         "@repo/validation": "workspace:*",
         "@types/jest": "^29",
