@@ -1,5 +1,5 @@
 import "./LandingCards.css";
-import { type IStaticImageData } from "@/types";
+import { type IStaticImageData } from "../../types";
 interface ICardProps {
     label: string;
     text: string;

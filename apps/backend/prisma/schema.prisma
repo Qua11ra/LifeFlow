@@ -1,0 +1,88 @@
+// This is your Prisma schema file,
+// learn more about it in the docs: https://pris.ly/d/prisma-schema
+
+// Get a free hosted Postgres database in seconds: `npx create-db`
+
+generator client {
+  provider = "prisma-client"
+  output   = "../src/generated/prisma"
+}
+
+datasource db {
+  provider = "postgresql"
+}
+
+model User {
+  id        String   @id @default(cuid())
+  name      String   @unique
+  email     String   @unique
+  password  String
+  avatar    String?
+  dreams    Dream[]
+  createdAt DateTime @default(now()) @map("created_at")
+
+  @@map("users")
+}
+
+model Dream {
+  id          String   @id @default(cuid())
+  title       String
+  description String
+  user        User     @relation(fields: [userId], references: [id], onDelete: Cascade)
+  userId      String   @map("user_id")
+  steps       Step[]
+  notes       Note[]
+  createdAt   DateTime @default(now()) @map("created_at")
+  updatedAt   DateTime @updatedAt @map("updated_at")
+  isDone      Boolean  @map("is_done")
+
+  @@map("dreams")
+}
+
+model Step {
+  id          String   @id @default(cuid())
+  title       String
+  description String
+  dream       Dream    @relation(fields: [dreamId], references: [id], onDelete: Cascade)
+  dreamId     String   @map("dream_id")
+  tasks       Task[]
+  notes       Note[]
+  createdAt   DateTime @default(now()) @map("created_at")
+  updatedAt   DateTime @updatedAt @map("updated_at")
+  isDone      Boolean  @map("is_done")
+
+  @@map("steps")
+}
+
+model Task {
+  id        String   @id @default(cuid())
+  text      String
+  step      Step     @relation(fields: [stepId], references: [id], onDelete: Cascade)
+  stepId    String   @map("step_id")
+  notes     Note[]
+  createdAt DateTime @default(now()) @map("created_at")
+  updatedAt DateTime @updatedAt @map("updated_at")
+  isDone    Boolean  @map("is_done")
+
+  @@map("tasks")
+}
+
+model Note {
+  id        String   @id @default(cuid())
+  text      String
+  createdAt DateTime @default(now()) @map("created_at")
+  updatedAt DateTime @updatedAt @map("updated_at")
+
+  dreamId String? @map("dream_id")
+  stepId  String? @map("step_id")
+  taskId  String? @map("task_id")
+
+  dream Dream? @relation(fields: [dreamId], references: [id], onDelete: Cascade)
+  task  Task?  @relation(fields: [taskId], references: [id], onDelete: Cascade)
+  step  Step?  @relation(fields: [stepId], references: [id], onDelete: Cascade)
+
+  @@index([dreamId])
+  @@index([stepId])
+  @@index([taskId])
+  @@map("notes")
+}

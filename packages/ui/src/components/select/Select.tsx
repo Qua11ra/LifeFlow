@@ -1,5 +1,5 @@
 import type { SelectHTMLAttributes } from "react";
-import type { Option } from "@/types";
+import type { Option } from "../../types";
 import "./Select.css";
 
 interface ISelectProps extends SelectHTMLAttributes<HTMLSelectElement> {

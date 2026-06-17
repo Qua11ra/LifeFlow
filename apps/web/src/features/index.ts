@@ -1,5 +1,5 @@
-import useLoginForm from "./auth/useLoginForm";
-import useRegistrationForm from "./auth/useRegistrationForm";
+import useLoginForm from "./auth/hooks/useLoginForm";
+import useRegistrationForm from "./auth/hooks/useRegistrationForm";
 import GoToAppButton from "./goToApp/GoToAppButton";
 import GoUpButton from "./goUp/GoUpButton";
 import SwitchThemeButton from "./switch-theme/SwitchThemeButton";

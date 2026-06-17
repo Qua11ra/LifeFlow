@@ -7,4 +7,15 @@ export {
     type RegistrationSchemaType,
 } from "./src/schemas/auth";
 
+export {
+    DreamSchema,
+    NoteSchema,
+    StepSchema,
+    TaskSchema,
+    type DreamSchemaType,
+    type NoteSchemaType,
+    type StepSchemaType,
+    type TaskSchemaType
+} from "./src/schemas/entities"
+
 export { validate };

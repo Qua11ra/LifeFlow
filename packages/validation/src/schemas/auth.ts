@@ -9,6 +9,7 @@ const Login1StepSchema = z.object({
         .string()
         .trim()
         .min(8, "Password must be at least 8 characters")
+        .max(50, "Password is too safe :)")
         .regex(
             PASSWORD_SCHEMA,
             "Password must contain at least one uppercase letter, one lowercase letter, one digit, and one special character",
@@ -17,12 +18,13 @@ const Login1StepSchema = z.object({
 
 const Registration1StepSchema = z
     .object({
-        name: z.string().trim().min(3, "Name must be at least 3 characters"),
+        name: z.string().trim().min(3, "Name must be at least 3 characters").max(50, "Name must be at most 50 characters"),
         email: z.email("Invalid email"),
         password: z
             .string()
             .trim()
             .min(8, "Password must be at least 8 characters")
+            .max(50, "Password is too safe :)")
             .regex(
                 PASSWORD_SCHEMA,
                 "Password must contain at least one uppercase letter, one lowercase letter, one digit, and one special character",

@@ -1,5 +1,4 @@
 "use client";
-
 import { AuthForm, Button, Input, PasswordInput } from "@repo/ui";
 import Link from "next/link";
 import type { FormEvent } from "react";

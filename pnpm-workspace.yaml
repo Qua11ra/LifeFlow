@@ -4,10 +4,28 @@ packages:
 
 allowBuilds:
   '@nestjs/core': true
+  '@prisma/engines': true
   '@swc/core': true
+  bcrypt: true
   esbuild: true
   msgpackr-extract: true
+  prisma: true
   sharp: true
   unrs-resolver: false
 
-onlyBuiltDependencies: '["@nestjs/core","@swc/core","esbuild","msgpackr-extract","sharp","unrs-resolver"]'
+onlyBuiltDependencies:
+  - '@nestjs/core'
+  - '@swc/core'
+  - esbuild
+  - msgpackr-extract
+  - sharp
+
+overrides:
+  glob: ^13.0.0
+  jsdom: ^26.0.0
+  uuid: ^11.0.0
+
+peerDependencyRules:
+  allowedVersions:
+    valibot: 1.2.0 || 1.4.1
+    chokidar: 4 || 5
